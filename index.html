@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل | حلول الدفع الذكية</title>
+  <meta name="description" content="حلول الدفع الذكية في الإمارات: ماكينة دفع POS، الدفع عبر الرابط، وبوابة الدفع للموقع الإلكتروني. تفعيل الخدمة خلال 72 ساعة عمل، عمولة تبدأ من 1.25%، بدون رسوم شهرية أو سنوية، دعم 24/7، وتحويل لحسابك البنكي خلال 24 ساعة." />
+<style>
+    :root{
+      --bg:#0b1220;
+      --bg2:#111a2e;
+      --panel:rgba(255,255,255,.05);
+      --panel-strong:#111c34;
+      --text:#f8fafc;
+      --muted:#cbd5e1;
+      --primary:#ff6a1a;
+      --primary2:#ff954f;
+      --green:#25d366;
+      --line:rgba(255,255,255,.09);
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+      --max:1180px;
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Tahoma,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(255,106,26,.16), transparent 18%),
+        radial-gradient(circle at left center, rgba(255,255,255,.03), transparent 22%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      line-height:1.75;
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max), calc(100% - 32px));margin:auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(14px);
+      background:rgba(11,18,32,.78);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar .inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:12px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+
+    .brand-badge{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--primary),var(--primary2));
+      box-shadow:0 12px 26px rgba(255,106,26,.28);
+      font-size:1.1rem;
+    }
+
+    .top-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:15px 24px;
+      border-radius:999px;
+      border:none;
+      cursor:pointer;
+      font:inherit;
+      font-weight:800;
+      transition:.22s ease;
+      text-align:center;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary2));
+      color:#fff;
+      box-shadow:0 14px 30px rgba(255,106,26,.28);
+    }
+    .btn-secondary{
+      background:rgba(255,255,255,.05);
+      color:#fff;
+      border:1px solid var(--line);
+    }
+    .btn-whatsapp{
+      background:linear-gradient(135deg,#25d366,#1faa50);
+      color:#fff;
+      box-shadow:0 14px 30px rgba(37,211,102,.25);
+    }
+
+    .floating-cta{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:60;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#25d366,#1faa50);
+      color:#fff;
+      font-weight:900;
+      box-shadow:0 18px 36px rgba(0,0,0,.28);
+    }
+
+    .hero{
+      padding:72px 0 42px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:26px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,106,26,.12);
+      color:#ffd6bf;
+      border:1px solid rgba(255,106,26,.25);
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    h1{
+      margin:0 0 16px;
+      font-size:clamp(2.2rem,5vw,4.5rem);
+      line-height:1.08;
+      font-weight:900;
+      letter-spacing:-.02em;
+    }
+
+    .gradient{
+      background:linear-gradient(135deg,#fff,var(--primary2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .lead{
+      margin:0 0 22px;
+      color:var(--muted);
+      font-size:1.12rem;
+      max-width:760px;
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin:22px 0 24px;
+    }
+
+    .point,.card,.service,.trust-card,.activity-card,.doc-card,.proof-card,.timeline-card,.faq-item,.form-shell,.offer-panel,.logo-card,.stat{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .point{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:15px 16px;
+      font-weight:700;
+    }
+
+    .icon{
+      width:40px;
+      height:40px;
+      flex:0 0 auto;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,106,26,.14);
+      font-size:1rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .mockup{
+      min-height:640px;
+      padding:18px;
+      border-radius:34px;
+      background:
+        radial-gradient(circle at top left, rgba(255,106,26,.2), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,.08), transparent 18%),
+        linear-gradient(180deg,#141f39,#0d162a);
+      border:1px solid rgba(255,255,255,.08);
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 24px 60px rgba(0,0,0,.32);
+    }
+
+    .mockup::before{
+      content:"";
+      position:absolute;
+      inset:14px;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.08);
+      pointer-events:none;
+    }
+
+    .hero-showcase{
+      display:flex;
+      align-items:stretch;
+    }
+
+    .hero-photo-card{
+      position:relative;
+      width:100%;
+      min-height:610px;
+      border-radius:28px;
+      overflow:hidden;
+      background:#181f31;
+      box-shadow:0 20px 55px rgba(0,0,0,.28);
+      isolation:isolate;
+    }
+
+    .hero-photo{
+      width:100%;
+      height:100%;
+      min-height:610px;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+      transform:scale(1.03);
+    }
+
+    .hero-photo-gradient{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(9,14,28,.08) 0%, rgba(9,14,28,.2) 24%, rgba(9,14,28,.72) 100%),
+        linear-gradient(90deg, rgba(12,18,32,.08) 0%, rgba(12,18,32,.05) 42%, rgba(12,18,32,.55) 100%);
+      z-index:1;
+    }
+
+    .hero-copy{
+      position:absolute;
+      right:26px;
+      left:26px;
+      bottom:26px;
+      z-index:3;
+      padding:22px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(8,12,24,.28), rgba(8,12,24,.62));
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 16px 40px rgba(0,0,0,.24);
+    }
+
+    .hero-copy h3{
+      margin:12px 0 8px;
+      font-size:clamp(1.45rem,2.2vw,2rem);
+      line-height:1.2;
+    }
+
+    .hero-copy p{
+      margin:0;
+      color:#e2e8f0;
+      font-size:1rem;
+      max-width:540px;
+    }
+
+    .hero-mini-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      font-weight:800;
+      font-size:.92rem;
+    }
+
+    .hero-float{
+      position:absolute;
+      z-index:4;
+      min-width:160px;
+      padding:16px 18px;
+      border-radius:22px;
+      background:rgba(255,255,255,.94);
+      color:#0f172a;
+      box-shadow:0 18px 40px rgba(0,0,0,.24);
+      border:1px solid rgba(255,255,255,.72);
+    }
+
+    .hero-float strong,
+    .glass-stat b{
+      display:block;
+      font-size:1.2rem;
+      line-height:1.1;
+      margin-bottom:4px;
+    }
+
+    .hero-float span,
+    .glass-stat span{
+      color:#475569;
+      font-weight:700;
+      font-size:.92rem;
+    }
+
+    .hero-float-top{
+      top:28px;
+      left:24px;
+    }
+
+    .hero-float-bottom{
+      left:24px;
+      bottom:190px;
+    }
+
+    .hero-glass-panel{
+      position:absolute;
+      top:24px;
+      right:24px;
+      z-index:4;
+      display:flex;
+      align-items:center;
+      gap:18px;
+      padding:18px 22px;
+      border-radius:24px;
+      background:rgba(255,255,255,.14);
+      backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 18px 40px rgba(0,0,0,.18);
+      max-width:320px;
+    }
+
+    .glass-stat{
+      min-width:0;
+    }
+
+    .glass-sep{
+      width:1px;
+      align-self:stretch;
+      background:rgba(255,255,255,.2);
+    }
+
+    .mock-grid,.stats-grid,.services-grid,.trust-grid,.activities-grid,.docs-grid,.proof-grid,.timeline-grid,.logos-grid,.faq{
+      display:grid;
+      gap:18px;
+    }
+
+    .mock-grid{grid-template-columns:repeat(2,1fr);margin-top:16px}
+    .stats-grid{grid-template-columns:repeat(4,1fr)}
+    .services-grid{grid-template-columns:repeat(3,1fr)}
+    .trust-grid,.activities-grid,.docs-grid,.proof-grid{grid-template-columns:repeat(2,1fr)}
+    .timeline-grid{grid-template-columns:repeat(3,1fr)}
+    .logos-grid{grid-template-columns:repeat(5,1fr)}
+
+    .stat,.service,.trust-card,.activity-card,.doc-card,.proof-card,.timeline-card,.logo-card{
+      padding:22px;
+    }
+
+    .stat b{
+      display:block;
+      font-size:1.15rem;
+      margin-bottom:2px;
+    }
+
+    section{padding:38px 0}
+
+    .section-head{
+      max-width:780px;
+      margin:0 auto 24px;
+      text-align:center;
+    }
+
+    .section-head h2{
+      margin:0 0 10px;
+      font-size:clamp(1.7rem,3vw,3rem);
+      line-height:1.15;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .service h3,.trust-card h3,.activity-card h3,.doc-card h3,.proof-card h3,.timeline-card h3{
+      margin:12px 0 8px;
+      font-size:1.28rem;
+    }
+
+    .service p,.trust-card p,.activity-card p,.doc-card p,.proof-card p,.timeline-card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .logo-card{
+      text-align:center;
+      font-weight:900;
+      font-size:1.08rem;
+    }
+
+    ul.clean{
+      list-style:none;
+      padding:0;
+      margin:14px 0 0;
+      display:grid;
+      gap:8px;
+    }
+
+    ul.clean li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      font-weight:700;
+    }
+
+    ul.clean li::before{
+      content:"✓";
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--primary),var(--primary2));
+      color:#fff;
+      font-size:.76rem;
+      flex:0 0 auto;
+      margin-top:4px;
+    }
+
+    .problem-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .card{
+      padding:22px;
+    }
+
+    .card h3{
+      margin:10px 0 6px;
+      font-size:1.22rem;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .urgent{
+      background:linear-gradient(135deg, rgba(255,106,26,.16), rgba(255,255,255,.03));
+      border:1px solid rgba(255,106,26,.22);
+      border-radius:22px;
+      padding:18px 20px;
+      text-align:center;
+      color:#fff3ea;
+      font-weight:800;
+    }
+
+    .sub-cta{
+      margin-top:18px;
+      text-align:center;
+    }
+
+    .form-section{
+      padding-bottom:88px;
+    }
+
+    .form-wrap{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .offer-panel{
+      padding:28px;
+      position:sticky;
+      top:88px;
+      background:linear-gradient(180deg,#1a2542,#101a30);
+    }
+
+    .offer-panel h3{
+      margin:12px 0 10px;
+      font-size:2rem;
+      line-height:1.1;
+    }
+
+    .offer-panel p{
+      margin:0 0 16px;
+      color:var(--muted);
+    }
+
+    .offer-list{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .offer-list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      font-weight:700;
+    }
+
+    .offer-list li::before{
+      content:"✔";
+      width:24px;
+      height:24px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.08);
+      flex:0 0 auto;
+    }
+
+    .mini-note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      font-weight:700;
+    }
+
+    .form-shell{
+      padding:28px;
+      background:#fff;
+      color:#111827;
+    }
+
+    .form-shell h3{
+      margin:0 0 8px;
+      font-size:1.95rem;
+      line-height:1.15;
+    }
+
+    .form-shell p{
+      margin:0 0 20px;
+      color:#475569;
+    }
+
+    form{display:grid;gap:16px}
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+
+    .field{
+      display:grid;
+      gap:8px;
+    }
+
+    .field.full,.field.services,.field.devices{
+      grid-column:1 / -1;
+    }
+
+    label{
+      font-weight:800;
+      color:#0f172a;
+    }
+
+    input,select,textarea{
+      width:100%;
+      padding:15px 16px;
+      border-radius:16px;
+      border:1.5px solid rgba(15,23,42,.12);
+      font:inherit;
+      outline:none;
+      background:#fff;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(255,106,26,.65);
+      box-shadow:0 0 0 4px rgba(255,106,26,.12);
+    }
+
+    .options{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .option{position:relative}
+    .option input{
+      position:absolute;
+      opacity:0;
+      pointer-events:none;
+    }
+
+    .option label{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      min-height:76px;
+      padding:16px;
+      border-radius:18px;
+      border:1.5px solid rgba(15,23,42,.12);
+      cursor:pointer;
+      transition:.2s ease;
+      background:#fff;
+    }
+
+    .option input:checked + label{
+      border-color:rgba(255,106,26,.55);
+      background:#fff7f2;
+      box-shadow:0 12px 25px rgba(255,106,26,.12);
+    }
+
+    .submit-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .small{
+      margin:0;
+      font-size:.92rem;
+      color:#64748b;
+    }
+
+    .faq{
+      grid-template-columns:1fr;
+    }
+
+    .faq-item{
+      padding:20px;
+    }
+
+    .faq-item h3{
+      margin:0 0 6px;
+      font-size:1.1rem;
+    }
+
+    .faq-item p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    footer{
+      padding:28px 0 42px;
+    }
+
+    .footer-card{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+      padding:22px;
+      border-radius:24px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    @media (max-width:1080px){
+      .hero-grid,.form-wrap,.problem-wrap{grid-template-columns:1fr}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .services-grid{grid-template-columns:1fr 1fr}
+      .trust-grid,.activities-grid,.docs-grid,.proof-grid,.timeline-grid,.logos-grid{grid-template-columns:1fr 1fr}
+      .offer-panel{position:relative;top:0}
+    }
+
+    @media (max-width:760px){
+      .hero-points,.services-grid,.trust-grid,.activities-grid,.docs-grid,.proof-grid,.timeline-grid,.options,.form-grid,.logos-grid{grid-template-columns:1fr}
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .topbar .inner,.submit-row,.footer-card{flex-direction:column;align-items:stretch}
+      .mockup{min-height:auto}
+      .hero-photo,
+      .hero-photo-card{min-height:540px}
+      .hero-copy{left:16px;right:16px;bottom:16px;padding:18px}
+      .hero-float-top{top:16px;left:16px}
+      .hero-float-bottom{left:16px;bottom:172px}
+      .hero-glass-panel{top:auto;right:16px;left:16px;bottom:186px;max-width:none}
+      .hero{padding-top:42px}
+      .floating-cta{left:18px;right:18px;justify-content:center}
+    }
+
+    @media (max-width:520px){
+      .stats-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container inner">
+      <a href="#top" class="brand">
+        <span class="brand-badge">💳</span>
+        <span>حلول الدفع الذكية في الإمارات</span>
+      </a>
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="tel:0557337103">اتصال مباشر</a>
+        <a class="btn btn-primary" href="#lead-form">احصل على استشارة مجانية</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">⚡ تفعيل سريع • بدون رسوم شهرية • دعم 24/7</span>
+          <h1>ابدأ الآن واحصل على <span class="gradient">خدمتك خلال 72 ساعة عمل</span><br>بدون رسوم شهرية وعمولة تبدأ من <span class="gradient">1.25%</span></h1>
+          <p class="lead">إذا كان نشاطك لا يوفّر طرق دفع سهلة، فأنت تخسر عملاء يوميًا. نوفّر لك حلول دفع متكاملة: ماكينة دفع، الدفع عبر الرابط، وبوابة الدفع للموقع الإلكتروني — مع دعم 24/7 وتحويل لحسابك البنكي خلال 24 ساعة.</p>
+
+          <div class="hero-points">
+            <div class="point"><span class="icon">💳</span><span>نوفر خيارات التقسيط عبر Tabby و Tamara لشراء خدمات حلول الدفع الذكية</span></div>
+            <div class="point"><span class="icon">💸</span><span>تبدأ نسبة العمولة من 1.25%</span></div>
+            <div class="point"><span class="icon">🏦</span><span>التحويل إلى حسابك البنكي خلال 24 ساعة</span></div>
+            <div class="point"><span class="icon">🛟</span><span>دعم فني متواصل 24/7</span></div>
+            <div class="point"><span class="icon">📦</span><span>بدون رسوم شهرية أو سنوية وبدون رسوم مخفية</span></div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#lead-form" class="btn btn-primary">ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل</a>
+            <a href="#services" class="btn btn-secondary">اكتشف كل الخدمات</a>
+          </div>
+        </div>
+
+        <div class="mockup hero-showcase">
+          <div class="hero-photo-card">
+            <img class="hero-photo" src="hero-payment-visual.jpg" alt="رائدة أعمال تستخدم جهاز دفع ذكي داخل متجر" />
+            <div class="hero-photo-gradient"></div>
+
+            <div class="hero-copy">
+              <span class="hero-mini-badge">💳 ماكينة دفع + رابط دفع + بوابة دفع</span>
+              <h3>حلول دفع ذكية تعطي نشاطك حضورًا احترافيًا من أول زيارة</h3>
+              <p>تصميم أقوى، ثقة أعلى، وتجربة أوضح لعرض مزايا الخدمة مباشرة داخل أول الشاشة.</p>
+            </div>
+
+            <div class="hero-float hero-float-top">
+              <strong>72 ساعة عمل</strong>
+              <span>تفعيل سريع وواضح</span>
+            </div>
+
+            <div class="hero-float hero-float-bottom">
+              <strong>1.25%</strong>
+              <span>عمولة تبدأ من</span>
+            </div>
+
+            <div class="hero-glass-panel">
+              <div class="glass-stat">
+                <b>24 ساعة</b>
+                <span>تحويل للحساب البنكي</span>
+              </div>
+              <div class="glass-sep"></div>
+              <div class="glass-stat">
+                <b>24/7</b>
+                <span>دعم فني وتشغيلي</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat"><b>0</b><span>رسوم شهرية أو سنوية</span></div>
+          <div class="stat"><b>1.25%</b><span>تبدأ نسبة العمولة من</span></div>
+          <div class="stat"><b>24 ساعة</b><span>التحويل إلى الحساب البنكي</span></div>
+          <div class="stat"><b>72 ساعة</b><span>تفعيل الخدمة</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>هل تواجه هذه المشاكل في نشاطك؟</h2>
+          <p>هذه أكثر الأسباب التي تجعل الأنشطة تتعطل في استقبال المدفوعات وتخسر فرصًا يومية.</p>
+        </div>
+
+        <div class="problem-wrap">
+          <div class="card"><span class="icon">❌</span><h3>لا توفّر وسائل دفع مريحة</h3><p>كثير من العملاء يفضّلون البطاقة أو المحافظ الرقمية، وعندما لا يجدونها قد يغادرون فورًا.</p></div>
+          <div class="card"><span class="icon">❌</span><h3>رسوم عالية أو غير واضحة</h3><p>عدم وضوح العمولة والتكاليف يضغط على هامش الربح ويزيد التردد عند التعاقد.</p></div>
+          <div class="card"><span class="icon">❌</span><h3>تأخير في التحويلات البنكية</h3><p>تأخر وصول أموالك يؤثر على السيولة والتشغيل اليومي ويعطل النمو.</p></div>
+          <div class="card"><span class="icon">❌</span><h3>دعم بطيء وقت الحاجة</h3><p>أي مشكلة تقنية تحتاج جهة ترد عليك بسرعة، لا بعد ساعات أو أيام.</p></div>
+        </div>
+
+        <div style="margin-top:18px" class="urgent">⚡ الحل هنا: نظام دفع متكامل يختصر الوقت، يوضّح التكلفة، ويبدأ تشغيله بسرعة.</div>
+        <div class="sub-cta"><a href="#lead-form" class="btn btn-primary">ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>خيارات تقسيط مرنة لشراء خدمات حلول الدفع الذكية</h2>
+          <p>نوفّر خدمة التقسيط للعملاء الذين يرغبون في شراء خدمات حلول الدفع الذكية بسهولة ومرونة عبر Tabby و Tamara.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card"><div class="icon">💳</div><h3>Tabby</h3><p>نوفر خيار Tabby لتقسيط تكلفة خدمات حلول الدفع الذكية بشكل مرن.</p></article>
+          <article class="trust-card"><div class="icon">💳</div><h3>Tamara</h3><p>نوفر خيار Tamara لتقسيط تكلفة خدمات حلول الدفع الذكية بشكل مريح وواضح.</p></article>
+          <article class="trust-card"><div class="icon">🧾</div><h3>تقسيط لشراء خدماتنا</h3><p>خيار مناسب لمن يرغب في الحصول على خدمات حلول الدفع الذكية وتقسيم التكلفة بطريقة مريحة.</p></article>
+          <article class="trust-card"><div class="icon">⚡</div><h3>إجراءات واضحة</h3><p>يمكن الاستفادة من خيارات التقسيط عند شراء خدمات حلول الدفع الذكية بسهولة.</p></article>
+        </div>
+
+        <div class="sub-cta"><a href="#lead-form" class="btn btn-primary">اطلب خدمتك الآن مع خيار التقسيط</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>انضم إلى أكثر من <span class="gradient">150,000 تاجر موثوق</span>!</h2>
+          <p>الموثوقية مهمة. لهذا السبب تعتمد <strong>700,000 نقطة دفع</strong> في السوق على أجهزتنا وبرمجياتنا المتميزة.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card"><div class="icon">🔐</div><h3>معاملات آمنة</h3><p>حماية عالية لجميع عمليات الدفع لضمان أمان بياناتك وبيانات عملائك.</p></article>
+          <article class="trust-card"><div class="icon">💳</div><h3>قبول جميع البطاقات</h3><p>ندعم جميع بطاقات الدفع والمحافظ الرقمية لتوفير تجربة سلسة للعملاء.</p></article>
+          <article class="trust-card"><div class="icon">💰</div><h3>رسوم معاملات منخفضة</h3><p>عمولة تبدأ من 1.25% فقط بدون رسوم شهرية أو مخفية.</p></article>
+          <article class="trust-card"><div class="icon">⚡</div><h3>تحويلات سريعة إلى حسابك البنكي</h3><p>تحويل مباشر إلى حسابك البنكي خلال 24 ساعة.</p></article>
+        </div>
+
+        <div class="sub-cta"><a href="#lead-form" class="btn btn-primary">ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل</a></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>3 خدمات أساسية تغطي كل احتياجك</h2>
+          <p>سواء كان نشاطك داخل متجر، عبر واتساب، أو من خلال موقع إلكتروني — لدينا الحل المناسب.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service">
+            <div class="icon">🧾</div>
+            <h3>ماكينة الدفع POS</h3>
+            <p>جهاز نقاط بيع حديث يساعدك على تسريع عمليات الدفع داخل نشاطك وتقديم تجربة احترافية للعملاء.</p>
+            <ul class="clean">
+              <li>رسوم إعداد تدفع مرة واحدة فقط</li>
+              <li>عملية تشغيل سهلة وسريعة</li>
+              <li>لفات ورق مجانية مدى حياة المشروع</li>
+              <li>صيانة مجانية مدى حياة المشروع</li>
+              <li>عدد الأجهزة يبدأ من جهاز واحد حسب احتياجك</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="icon">🔗</div>
+            <h3>الدفع عبر الرابط</h3>
+            <p>استقبل مدفوعاتك بسهولة عبر إرسال رابط دفع للعميل خلال ثوانٍ.</p>
+            <ul class="clean">
+              <li>مناسب للخدمات والفواتير والطلبات المسبقة</li>
+              <li>سهل الإرسال عبر واتساب أو الرسائل أو البريد</li>
+              <li>بدون تعقيد أو تجهيزات كبيرة</li>
+              <li>يسرّع التحصيل ويقلل التأخير</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="icon">🌐</div>
+            <h3>بوابة الدفع للموقع الإلكتروني</h3>
+            <p>اربط موقعك الإلكتروني ببوابة دفع احترافية لاستقبال المدفوعات أونلاين بسهولة وأمان.</p>
+            <ul class="clean">
+              <li>رسوم إعداد لمرة واحدة</li>
+              <li>أقل نسبة عمولة على المعاملات</li>
+              <li>معاملات أسرع وأعمال أسهل</li>
+              <li>ربط مناسب لموقعك أو متجرك الإلكتروني</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="sub-cta"><a href="#lead-form" class="btn btn-primary">اختر خدمتك الآن وابدأ خلال 72 ساعة</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>لماذا يختارنا أصحاب الأنشطة في الإمارات؟</h2>
+          <p>لأن العرض واضح، التكلفة شفافة، والخدمة عملية وسريعة.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card"><div class="icon">💰</div><h3>رسوم واضحة وشفافة</h3><p>بدون رسوم شهرية أو سنوية، وبدون تكاليف مخفية، مع عمولة تبدأ من 1.25%.</p></article>
+          <article class="trust-card"><div class="icon">🏦</div><h3>تحويل خلال 24 ساعة</h3><p>حتى تستفيد من أموالك بسرعة وتدير نشاطك براحة أكبر.</p></article>
+          <article class="trust-card"><div class="icon">🛠️</div><h3>صيانة مجانية مدى حياة المشروع</h3><p>مع لفات ورق مجانية ودعم مستمر يوفّر عليك مصاريف إضافية على المدى الطويل.</p></article>
+          <article class="trust-card"><div class="icon">🚚</div><h3>توصيل مجاني في جميع أنحاء الإمارات</h3><p>ابدأ الخدمة دون عناء لوجستي أو مصاريف توصيل إضافية.</p></article>
+        </div>
+
+        <div class="sub-cta"><a href="#lead-form" class="btn btn-primary">ابدأ الآن واستفد من العرض</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>+150 ألف عميل يثقون بنا في دولة الإمارات 🇦🇪</h2>
+          <p>مناسب لجميع الأنشطة الصغيرة والمتوسطة والكبيرة.</p>
+        </div>
+
+        <div class="logos-grid">
+          <div class="logo-card">Retail</div>
+          <div class="logo-card">Restaurant</div>
+          <div class="logo-card">Salon</div>
+          <div class="logo-card">E-Commerce</div>
+          <div class="logo-card">Services</div>
+        </div>
+
+        <div style="margin-top:18px" class="urgent">🔥 مناسب للمتاجر، المطاعم، الصالونات، المتاجر الإلكترونية والأنشطة الخدمية</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>نخدم مختلف الأنشطة التجارية</h2>
+          <p>سواء كنت تبدأ الآن أو لديك فروع متعددة، يمكن تخصيص الخدمة حسب نشاطك.</p>
+        </div>
+
+        <div style="margin-bottom:20px" class="urgent">💳 نوفر خيارات التقسيط عبر Tabby و Tamara لمن يرغب في شراء خدمات حلول الدفع الذكية</div>
+
+        <div class="activities-grid">
+          <article class="activity-card"><div class="icon">💳</div><h3>Tabby</h3><p>نوفر خيار Tabby لتقسيط تكلفة خدمات حلول الدفع الذكية بشكل مرن.</p></article>
+          <article class="activity-card"><div class="icon">💳</div><h3>Tamara</h3><p>نوفر خيار Tamara لتقسيط تكلفة خدمات حلول الدفع الذكية بشكل مريح وواضح.</p></article>
+          <article class="activity-card"><div class="icon">🏪</div><h3>متاجر</h3><p>نقاط بيع مناسبة للتجزئة والسوبرماركت والمتاجر اليومية.</p></article>
+          <article class="activity-card"><div class="icon">🍽️</div><h3>مطاعم وكافيهات</h3><p>تسريع عملية التحصيل وتقليل الضغط وقت الذروة.</p></article>
+          <article class="activity-card"><div class="icon">💇</div><h3>صالونات ومراكز تجميل</h3><p>قبول المدفوعات بسهولة وتقديم تجربة احترافية للعميل.</p></article>
+          <article class="activity-card"><div class="icon">🛍️</div><h3>متاجر إلكترونية وخدمات رقمية</h3><p>بوابة دفع أو رابط دفع مناسب للطلبات الإلكترونية.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>وسائل الدفع المدعومة</h2>
+          <p>نوفر حلول دفع حديثة تلائم ما يتوقعه العميل اليوم.</p>
+        </div>
+
+        <div class="logos-grid">
+          <div class="logo-card">Visa</div>
+          <div class="logo-card">Mastercard</div>
+          <div class="logo-card">Apple Pay</div>
+          <div class="logo-card">Samsung Pay</div>
+          <div class="logo-card">استشارة مجانية</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>لماذا يختارنا العملاء بدل البدائل؟</h2>
+          <p>مقارنة سريعة توضح الفارق الحقيقي في التكلفة والخدمة.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card"><div class="icon">💸</div><h3>بدون رسوم شهرية</h3><p>تدفع فقط عمولة تبدأ من 1.25% بدون اشتراكات.</p></article>
+          <article class="trust-card"><div class="icon">🏦</div><h3>تحويل خلال 24 ساعة</h3><p>سيولة أسرع مقارنة بالحلول التي تؤخر التحويل.</p></article>
+          <article class="trust-card"><div class="icon">🛟</div><h3>دعم 24/7</h3><p>فريق جاهز للرد الفوري عند أي مشكلة.</p></article>
+          <article class="trust-card"><div class="icon">🧾</div><h3>تكلفة تشغيل أقل</h3><p>صيانة ولفات ورق مجانية مدى حياة المشروع.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>كيف تبدأ معنا؟</h2>
+          <p>الخطوات واضحة وسريعة من أول طلب وحتى بدء التحصيل.</p>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="timeline-card"><div class="icon">1</div><h3>أرسل الطلب</h3><p>املأ النموذج وحدد نوع النشاط والخدمة المطلوبة.</p></article>
+          <article class="timeline-card"><div class="icon">2</div><h3>نراجع الاحتياج</h3><p>يتواصل معك الفريق لتحديد أنسب حل وعدد الأجهزة عند الحاجة.</p></article>
+          <article class="timeline-card"><div class="icon">3</div><h3>تفعيل الخدمة خلال 72 ساعة عمل</h3><p>بعد استكمال المتطلبات، يتم تفعيل الخدمة خلال 72 ساعة عمل.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container docs-grid">
+        <article class="doc-card">
+          <div class="icon">📄</div>
+          <h3>المتطلبات لبدء الخدمة</h3>
+          <p>لتسريع عملية التفعيل، جهّز المستندات التالية:</p>
+          <ul class="clean">
+            <li>نسخة من الرخصة التجارية</li>
+            <li>جواز السفر والهوية الإماراتية</li>
+            <li>عقد الإيجار</li>
+            <li>إثبات حساب بنكي (IBAN)</li>
+            <li>صورة للمكتب مع اللوحة الإعلانية</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <div class="icon">🎁</div>
+          <h3>ما الذي تحصل عليه أيضًا؟</h3>
+          <p>العرض لا يقتصر على الجهاز أو البوابة فقط، بل يشمل عناصر تخفف عنك التكلفة والتشغيل:</p>
+          <ul class="clean">
+            <li>استشارة مجانية قبل البدء</li>
+            <li>توصيل مجاني في جميع أنحاء الإمارات</li>
+            <li>مساعدة في فتح حساب بنكي تجاري</li>
+            <li>دعم تشغيلي وفني 24/7</li>
+            <li>شفافية كاملة بدون رسوم مخفية</li>
+            <li>خيارات التقسيط: Tabby / Tamara</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>ماذا يقول عملاؤنا؟</h2>
+          <p>تجارب مختصرة تدعم القرار وتخفف التردد.</p>
+        </div>
+
+        <div class="proof-grid">
+          <article class="proof-card"><div class="icon">⭐</div><h3>تفعيل سريع</h3><p>"تم تفعيل الجهاز خلال 72 ساعة عمل، والدعم كان ممتاز."</p></article>
+          <article class="proof-card"><div class="icon">⭐</div><h3>تحويل سريع</h3><p>"التحويل خلال 24 ساعة ساعدنا في إدارة السيولة."</p></article>
+          <article class="proof-card"><div class="icon">⭐</div><h3>تكلفة واضحة</h3><p>"بدون رسوم خفية، العمولة واضحة من البداية."</p></article>
+          <article class="proof-card"><div class="icon">⭐</div><h3>مناسب للمطاعم</h3><p>"الجهاز مناسب وقت الذروة وسهل الاستخدام."</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="urgent">بدون رسوم شهرية • عمولة تبدأ من 1.25% • تحويل خلال 24 ساعة • دعم 24/7 • Tabby • Tamara</div>
+        <div class="sub-cta"><a href="#lead-form" class="btn btn-primary">احصل على استشارة مجانية الآن</a></div>
+      </div>
+    </section>
+
+    <section class="form-section" id="lead-form">
+      <div class="container form-wrap">
+        <aside class="offer-panel">
+          <span class="eyebrow">🚀 جاهز للتفعيل السريع</span>
+          <h3>احصل على استشارة مجانية الآن</h3>
+          <p>اترك بياناتك وسيتم إرسالها مباشرة إلى واتساب ليتم التواصل معك بسرعة وتحديد أنسب خدمة لنشاطك. أولوية للطلبات المكتملة والجاهزة.</p>
+
+          <ul class="offer-list">
+            <li>ماكينة الدفع POS</li>
+            <li>الدفع عبر الرابط</li>
+            <li>بوابة الدفع للموقع الإلكتروني</li>
+            <li>خيارات التقسيط: Tabby / Tamara</li>
+            <li>عمولة تبدأ من 1.25%</li>
+            <li>تحويل خلال 24 ساعة</li>
+            <li>دعم 24/7</li>
+            <li>صيانة ولفات ورق مجانية مدى حياة المشروع</li>
+          </ul>
+
+          <div class="mini-note">📞 واتساب مباشر لاستلام الطلبات: <b dir="ltr">0557337103</b></div>
+        </aside>
+
+        <div class="form-shell">
+          <h3>املأ النموذج الآن</h3>
+          <p>كلما كانت معلوماتك أوضح، كانت سرعة الرد والتجهيز أفضل.</p>
+
+          <form id="leadCaptureForm">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="fullname">الاسم بالكامل</label>
+                <input id="fullname" name="fullname" type="text" placeholder="اكتب الاسم الكامل" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">رقم الهاتف</label>
+                <input id="phone" name="phone" type="tel" placeholder="+9715XXXXXXXX" required>
+              </div>
+
+              <div class="field">
+                <label for="email">الإيميل</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" required>
+              </div>
+
+              <div class="field">
+                <label for="emirate">الإمارة</label>
+                <select id="emirate" name="emirate" required>
+                  <option value="" selected disabled>اختر الإمارة</option>
+                  <option>أبوظبي</option>
+                  <option>دبي</option>
+                  <option>الشارقة</option>
+                  <option>عجمان</option>
+                  <option>أم القيوين</option>
+                  <option>رأس الخيمة</option>
+                  <option>الفجيرة</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="businessType">نوع النشاط</label>
+                <select id="businessType" name="businessType" required>
+                  <option value="" selected disabled>اختر نوع النشاط</option>
+                  <option>متجر</option>
+                  <option>مطعم</option>
+                  <option>صالون</option>
+                  <option>مقهى</option>
+                  <option>عيادة</option>
+                  <option>متجر إلكتروني</option>
+                  <option>نشاط خدمي</option>
+                  <option>أخرى</option>
+                </select>
+              </div>
+
+              <div class="field services">
+                <label>الخدمة المطلوبة</label>
+                <div class="options">
+                  <div class="option">
+                    <input type="checkbox" id="service-pos" name="service" value="ماكينة الدفع">
+                    <label for="service-pos"><span class="icon">🧾</span><span>ماكينة الدفع</span></label>
+                  </div>
+
+                  <div class="option">
+                    <input type="checkbox" id="service-link" name="service" value="الدفع عبر الرابط">
+                    <label for="service-link"><span class="icon">🔗</span><span>الدفع عبر الرابط</span></label>
+                  </div>
+
+                  <div class="option">
+                    <input type="checkbox" id="service-gateway" name="service" value="بوابة الدفع للموقع الإلكتروني">
+                    <label for="service-gateway"><span class="icon">🌐</span><span>بوابة الدفع للموقع الإلكتروني</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field devices" id="deviceCountWrap">
+                <label for="deviceCount">عدد الأجهزة المطلوبة في حال اختيار ماكينة الدفع</label>
+                <select id="deviceCount" name="deviceCount">
+                  <option value="">اختر عدد الأجهزة</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>أكثر من 5</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="notes">ملاحظات إضافية</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="اكتب أي تفاصيل إضافية عن نشاطك أو احتياجك"></textarea>
+              </div>
+            </div>
+
+            <div class="submit-row">
+              <button class="btn btn-primary" type="submit">أرسل طلبك الآن وابدأ خلال 72 ساعة</button>
+              <p class="small">بإرسال النموذج، سيتم فتح واتساب برسالة جاهزة تحتوي بيانات العميل لإرسالها مباشرة إلى الرقم المحدد.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>الأسئلة الشائعة</h2>
+          <p>إجابات سريعة على أهم الأسئلة قبل اتخاذ القرار.</p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item"><h3>هل توجد رسوم شهرية أو سنوية؟</h3><p>لا، العرض بدون رسوم شهرية أو سنوية، مع رسوم إعداد تدفع مرة واحدة فقط حسب الخدمة.</p></div>
+          <div class="faq-item"><h3>متى يتم تحويل المبالغ إلى الحساب البنكي؟</h3><p>التحويل إلى حسابك البنكي يتم خلال 24 ساعة.</p></div>
+          <div class="faq-item"><h3>متى يتم تفعيل الخدمة؟</h3><p>يتم تفعيل الخدمة خلال 72 ساعة عمل بعد استكمال المتطلبات.</p></div>
+          <div class="faq-item"><h3>هل الدعم الفني متوفر دائمًا؟</h3><p>نعم، يتوفر دعم فني 24/7.</p></div>
+          <div class="faq-item"><h3>هل يمكنني طلب أكثر من جهاز؟</h3><p>نعم، ويمكنك تحديد عدد الأجهزة المطلوبة داخل النموذج عند اختيار ماكينة الدفع.</p></div>
+          <div class="faq-item"><h3>هل يمكن تفعيل أكثر من خدمة معًا؟</h3><p>نعم، يمكنك اختيار ماكينة الدفع مع بوابة الدفع أو الدفع عبر الرابط حسب احتياجك.</p></div>
+          <div class="faq-item"><h3>هل الخدمة مناسبة للمشاريع الجديدة؟</h3><p>نعم، مناسبة للمشاريع الجديدة والقائمة، مع استشارة لتحديد الأنسب.</p></div>
+          <div class="faq-item"><h3>هل يوجد توصيل داخل الإمارات؟</h3><p>نعم، يوجد توصيل مجاني في جميع أنحاء الإمارات.</p></div>
+          <div class="faq-item"><h3>هل يتوفر التقسيط؟</h3><p>نعم، تتوفر خيارات التقسيط عبر Tabby و Tamara لمن يرغب في شراء خدمات حلول الدفع الذكية بطريقة أكثر مرونة.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="urgent">لا تؤجل القرار — ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل</div>
+        <div class="sub-cta"><a href="#lead-form" class="btn btn-primary">ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-card">
+        <div>
+          <strong style="display:block;font-size:1.1rem">أفضل حلول الدفع لنشاطك في الإمارات</strong>
+          <span style="color:var(--muted)">ماكينة الدفع • الدفع عبر الرابط • بوابة الدفع للموقع الإلكتروني • Tabby • Tamara</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="tel:0557337103" class="btn btn-secondary">اتصل الآن</a>
+          <a href="#lead-form" class="btn btn-primary">ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل</a>
+        </div>
+      </div>
+      <div style="text-align:center;color:var(--muted);margin-top:18px;font-weight:700">جميع الحقوق محفوظة 2026</div>
+    </div>
+  </footer>
+
+  <a class="floating-cta" href="https://wa.me/971557337103" target="_blank" aria-label="واتساب مباشر">💬 <span>احصل على عرضك الآن عبر واتساب</span></a>
+
+  <script>
+    const servicePos = document.getElementById('service-pos');
+    const deviceCountWrap = document.getElementById('deviceCountWrap');
+    const deviceCount = document.getElementById('deviceCount');
+    const leadCaptureForm = document.getElementById('leadCaptureForm');
+
+    function toggleDeviceCount() {
+      const show = servicePos.checked;
+      deviceCountWrap.style.display = show ? 'grid' : 'none';
+      if (!show) deviceCount.value = '';
+    }
+
+    function buildWhatsAppMessage(formData) {
+      const services = formData.getAll('service');
+      const formattedServices = services.length ? services.join('، ') : 'لم يتم التحديد';
+
+      const lines = [
+        '*طلب جديد - حلول الدفع الذكية*',
+        '━━━━━━━━━━━━━━━',
+        '',
+        '*بيانات العميل:*',
+        'الاسم بالكامل: ' + (formData.get('fullname') || '-'),
+        'رقم الهاتف: ' + (formData.get('phone') || '-'),
+        'الإيميل: ' + (formData.get('email') || '-'),
+        '',
+        '*تفاصيل النشاط:*',
+        'الإمارة: ' + (formData.get('emirate') || '-'),
+        'نوع النشاط: ' + (formData.get('businessType') || '-'),
+        '',
+        '*الخدمة المطلوبة:*',
+        formattedServices,
+        'عدد الأجهزة المطلوبة: ' + ((services.includes('ماكينة الدفع') && formData.get('deviceCount')) ? formData.get('deviceCount') : 'غير مطلوب'),
+        '',
+        '*ملاحظات إضافية:*',
+        (formData.get('notes') || 'لا يوجد'),
+        '',
+        '━━━━━━━━━━━━━━━'
+      ];
+
+      return encodeURIComponent(lines.join('\n'));
+    }
+
+    leadCaptureForm.addEventListener('submit', function(event){
+      event.preventDefault();
+      const formData = new FormData(leadCaptureForm);
+      const message = buildWhatsAppMessage(formData);
+      const whatsappUrl = 'https://wa.me/971557337103?text=' + message;
+      window.open(whatsappUrl, '_blank');
+    });
+
+    servicePos.addEventListener('change', toggleDeviceCount);
+    toggleDeviceCount();
+  </script>
+</body>
+</html>
