@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Your Order Has Been Received Successfully</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --text: #1f2a37;
+      --muted: #5b6b7d;
+      --line: #d9e7f3;
+      --soft: #eef7ff;
+      --soft2: #f8fcff;
+      --primary: #1e88e5;
+      --primary-dark: #1565c0;
+      --accent: #12314a;
+      --green: #119261;
+      --green-soft: #eafaf2;
+      --gold: #ffb84d;
+      --shadow: 0 18px 46px rgba(30,136,229,.12);
+      --shadow-strong: 0 28px 70px rgba(30,136,229,.18);
+      --container: 920px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(30,136,229,.10), transparent 26%),
+        linear-gradient(180deg, #fbfdff 0%, #f3f9ff 100%);
+      min-height: 100vh;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .topbar {
+      background: linear-gradient(90deg, #1565c0, #42a5f5);
+      color: #fff;
+      text-align: center;
+      padding: 11px 12px;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .15px;
+    }
+
+    .wrap {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 28px 16px 40px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      padding: 34px 24px 28px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(30,136,229,.07), transparent 25%),
+        radial-gradient(circle at 90% 15%, rgba(66,165,245,.10), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+      text-align: center;
+    }
+
+    .success-badge {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green-soft);
+      border: 2px solid #cfeedd;
+      box-shadow: 0 14px 28px rgba(17,146,97,.14);
+      font-size: 42px;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      line-height: 1.3;
+      color: #13202b;
+      font-weight: 900;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 0 auto 18px;
+      font-size: 18px;
+      line-height: 2;
+      color: #4f6172;
+      font-weight: 700;
+    }
+
+    .hero-image {
+      margin: 22px auto 18px;
+      max-width: 560px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 26px;
+      border: 1px solid #dde9f3;
+      box-shadow: 0 14px 34px rgba(0,0,0,.08);
+      object-fit: cover;
+    }
+
+    .micro-trust {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .micro-trust-item {
+      background: #fff;
+      border: 1px solid #dfebf5;
+      border-radius: 18px;
+      padding: 14px 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 900;
+      color: #35506b;
+    }
+
+    .section {
+      padding: 22px 24px;
+      border-top: 1px solid #edf4fa;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 28px;
+      color: #152330;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .section-sub {
+      margin: 0 0 20px;
+      text-align: center;
+      color: #5f7183;
+      font-size: 16px;
+      line-height: 1.9;
+      font-weight: 700;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 14px;
+    }
+
+    .step {
+      background: linear-gradient(135deg, #f8fcff, #fff);
+      border: 1px solid #dfebf5;
+      border-radius: 22px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      font-size: 18px;
+      font-weight: 900;
+      box-shadow: 0 12px 24px rgba(30,136,229,.24);
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      color: #586b7e;
+      line-height: 1.9;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 14px;
+    }
+
+    .summary-item {
+      background: #fff;
+      border: 1px solid #dfebf5;
+      border-radius: 22px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+
+    .summary-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .summary-title {
+      font-size: 15px;
+      font-weight: 900;
+      color: #1a2530;
+      margin-bottom: 4px;
+    }
+
+    .summary-text {
+      font-size: 14px;
+      color: #5f7183;
+      line-height: 1.8;
+      font-weight: 700;
+    }
+
+    .notice-box {
+      background: linear-gradient(135deg, #fffdf5, #fffaf0);
+      border: 1px solid #f4e0a3;
+      color: #7a5a00;
+      border-radius: 22px;
+      padding: 18px;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 2;
+      text-align: center;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #eef7ff, #f8fcff);
+      border: 1px solid #d7e7f5;
+      border-radius: 24px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: var(--primary-dark);
+    }
+
+    .contact-box p {
+      margin: 0;
+      color: #586b7e;
+      line-height: 1.9;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      min-height: 58px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      padding: 14px 22px;
+      font-size: 16px;
+      font-weight: 900;
+      transition: .22s ease;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #1976d2);
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(30,136,229,.24);
+    }
+
+    .btn-secondary {
+      background: #f2f8fd;
+      border: 1px solid #d7e7f5;
+      color: #2d4961;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      text-align: center;
+      color: #6a7f92;
+      font-size: 14px;
+      line-height: 1.9;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .steps,
+      .summary-grid,
+      .micro-trust {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .lead {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 18px 12px 30px;
+      }
+
+      .hero {
+        padding: 26px 16px 22px;
+      }
+
+      .section {
+        padding: 18px 16px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .steps,
+      .summary-grid,
+      .micro-trust {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .success-badge {
+        width: 82px;
+        height: 82px;
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">✅ Your order has been received successfully — our team will contact you shortly for confirmation</div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="hero">
+        <div class="success-badge">✓</div>
+
+        <h1>Thank You 🌷<br>Your Order Has Been Submitted Successfully</h1>
+
+        <p class="lead">
+          Thank you for choosing <strong>Intellectual Learning Book</strong>.
+          Your order has been sent successfully to our team, and we will contact you soon to confirm your order and delivery details within the UAE.
+        </p>
+
+        <div class="hero-image">
+          <img src="study-book-thankyou.jpg" alt="Intellectual Learning Book" />
+        </div>
+
+        <div class="micro-trust">
+          <div class="micro-trust-item">💵 Cash on Delivery</div>
+          <div class="micro-trust-item">🚚 Fast UAE Shipping</div>
+          <div class="micro-trust-item">🔁 30-Day Replacement Guarantee</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">What happens next?</h2>
+        <p class="section-sub">Here are the next steps after your order submission.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Order Review</h3>
+            <p>Our team will review your order details and make sure everything is ready for confirmation and shipping.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Confirmation Call</h3>
+            <p>We will contact you on the phone number you provided to confirm your name, address, and order details.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Preparation & Shipping</h3>
+            <p>After confirmation, your order will be prepared and shipped quickly within the UAE.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Order Summary</h2>
+        <p class="section-sub">Here are the main details of your order.</p>
+
+        <div class="summary-grid">
+          <div class="summary-item">
+            <div class="summary-icon">📚</div>
+            <div class="summary-title">Product</div>
+            <div class="summary-text">Intellectual Learning Book</div>
+          </div>
+
+          <div class="summary-item">
+            <div class="summary-icon">💰</div>
+            <div class="summary-title">Price</div>
+            <div class="summary-text">135 AED Only</div>
+          </div>
+
+          <div class="summary-item">
+            <div class="summary-icon">💵</div>
+            <div class="summary-title">Payment Method</div>
+            <div class="summary-text">Cash on Delivery</div>
+          </div>
+
+          <div class="summary-item">
+            <div class="summary-icon">🔁</div>
+            <div class="summary-title">Guarantee</div>
+            <div class="summary-text">30-Day Replacement</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="notice-box">
+          Please keep your phone available, as our team will contact you to confirm your order before shipping.
+          If we are unable to reach you, your shipment may be delayed.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="contact-box">
+          <strong>Important Note</strong>
+          <p>
+            If you entered any special note about your address or preferred contact time, our team will take it into consideration while reviewing your order.
+          </p>
+        </div>
+
+        <div class="cta-row">
+          <a href="index.html" class="btn btn-primary">Back to Home Page</a>
+          <a href="javascript:window.print()" class="btn btn-secondary">Print Confirmation Page</a>
+        </div>
+
+        <div class="footer-note">
+          Thank you for your trust 💙<br>
+          We hope your child enjoys a fun and valuable learning experience.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
