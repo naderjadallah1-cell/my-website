@@ -1390,7 +1390,7 @@
   </footer>
 
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwJ_FNg_m1UZxeYR7-DxwZBl2qz21vrbuzf36Ekx7zK8y7NPYAGHe6sgQPdEtVP7SY/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycby_dVGsD1tA6KBH7tem9B_1xXIdLZKAy2P75Ax0LuLTzQpFZGQk8lpFLjEr0le15zuQ/exec";
 
     function formatCountdown(diff) {
       const hours = Math.floor(diff / (1000 * 60 * 60));
@@ -1572,7 +1572,7 @@
       try {
         const response = await fetch(scriptURL, {
           method: "POST",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
         });
 
