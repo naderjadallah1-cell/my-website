@@ -12,18 +12,19 @@
   <style>
     :root {
       --white: #ffffff;
-      --text: #1f2a37;
-      --muted: #5b6b7d;
-      --line: #d9e7f3;
-      --soft: #eef7ff;
-      --soft2: #f8fcff;
-      --primary: #1e88e5;
-      --primary-dark: #1565c0;
-      --accent: #12314a;
-      --green: #119261;
-      --green-soft: #eafaf2;
-      --shadow: 0 18px 46px rgba(30,136,229,.12);
-      --shadow-strong: 0 28px 70px rgba(30,136,229,.18);
+      --text: #243244;
+      --muted: #66778a;
+      --line: #dbe8f4;
+      --soft: #eef8ff;
+      --soft2: #fffdf4;
+      --primary: #4aa3ff;
+      --primary-dark: #2f7fd6;
+      --accent: #2c4f6d;
+      --green: #2eb67d;
+      --green-soft: #ebfbf3;
+      --gold: #ffcc4d;
+      --shadow: 0 18px 46px rgba(74,163,255,.12);
+      --shadow-strong: 0 28px 70px rgba(74,163,255,.18);
       --container: 920px;
     }
 
@@ -34,8 +35,9 @@
       font-family: 'Cairo', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(30,136,229,.10), transparent 26%),
-        linear-gradient(180deg, #fbfdff 0%, #f3f9ff 100%);
+        radial-gradient(circle at top right, rgba(74,163,255,.10), transparent 26%),
+        radial-gradient(circle at top left, rgba(255,204,77,.10), transparent 20%),
+        linear-gradient(180deg, #fffefb 0%, #f7fbff 100%);
       min-height: 100vh;
     }
 
@@ -43,7 +45,7 @@
     a { text-decoration: none; color: inherit; }
 
     .topbar {
-      background: linear-gradient(90deg, #1565c0, #42a5f5);
+      background: linear-gradient(90deg, #4aa3ff, #6ec5ff);
       color: #fff;
       text-align: center;
       padding: 11px 12px;
@@ -70,9 +72,9 @@
       position: relative;
       padding: 34px 24px 28px;
       background:
-        radial-gradient(circle at 10% 10%, rgba(30,136,229,.07), transparent 25%),
-        radial-gradient(circle at 90% 15%, rgba(66,165,245,.10), transparent 22%),
-        linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+        radial-gradient(circle at 10% 10%, rgba(74,163,255,.07), transparent 25%),
+        radial-gradient(circle at 90% 15%, rgba(255,204,77,.10), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #fdfefe 100%);
       text-align: center;
     }
 
@@ -86,7 +88,7 @@
       justify-content: center;
       background: var(--green-soft);
       border: 2px solid #cfeedd;
-      box-shadow: 0 14px 28px rgba(17,146,97,.14);
+      box-shadow: 0 14px 28px rgba(46,182,125,.14);
       font-size: 42px;
       color: var(--green);
       font-weight: 900;
@@ -169,7 +171,7 @@
     }
 
     .step {
-      background: linear-gradient(135deg, #f8fcff, #fff);
+      background: linear-gradient(135deg, #fffdf4, #f4fbff);
       border: 1px solid #dfebf5;
       border-radius: 22px;
       padding: 18px;
@@ -188,7 +190,7 @@
       color: #fff;
       font-size: 18px;
       font-weight: 900;
-      box-shadow: 0 12px 24px rgba(30,136,229,.24);
+      box-shadow: 0 12px 24px rgba(74,163,255,.24);
     }
 
     .step h3 {
@@ -241,7 +243,7 @@
     }
 
     .notice-box {
-      background: linear-gradient(135deg, #fffdf5, #fffaf0);
+      background: linear-gradient(135deg, #fff8df, #fffdf4);
       border: 1px solid #f4e0a3;
       color: #7a5a00;
       border-radius: 22px;
@@ -253,7 +255,7 @@
     }
 
     .contact-box {
-      background: linear-gradient(135deg, #eef7ff, #f8fcff);
+      background: linear-gradient(135deg, #eef8ff, #fffdf4);
       border: 1px solid #d7e7f5;
       border-radius: 24px;
       padding: 20px;
@@ -303,15 +305,15 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #1976d2);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: #fff;
-      box-shadow: 0 16px 34px rgba(30,136,229,.24);
+      box-shadow: 0 16px 34px rgba(74,163,255,.24);
     }
 
     .btn-secondary {
-      background: #f2f8fd;
-      border: 1px solid #d7e7f5;
-      color: #2d4961;
+      background: #fffdf4;
+      border: 1px solid #f0df9b;
+      color: #7b5b00;
     }
 
     .footer-note {
@@ -415,7 +417,7 @@
           <div class="summary-item">
             <div class="summary-icon">💰</div>
             <div class="summary-title">Price</div>
-            <div class="summary-text" id="productPrice">89.99 AED</div>
+            <div class="summary-text" id="productPrice">75 AED</div>
           </div>
 
           <div class="summary-item">
@@ -491,7 +493,7 @@
   <script>
     const defaults = {
       product: "Study Book - Intellectual Learning Book",
-      price: "89.99 AED",
+      price: "75 AED",
       sku: "SIEO-N-TY-ZAM",
       city: "Not specified",
       name: "Valued Customer",
