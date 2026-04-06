@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Book | Flashy Kids Toy Style</title>
+  <title>Study Book | Neon Toy Ad</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,36 +41,33 @@
 
   <style>
     :root {
-      --bg: #060606;
-      --bg2: #111111;
-      --card: #131313;
-      --card2: #1a1a1a;
+      --bg: #070b16;
+      --bg2: #0e1324;
+      --card: #12182b;
+      --card2: #171f38;
       --white: #ffffff;
-      --text: #ffffff;
-      --muted: #d2d2d2;
+      --text: #f4f7ff;
+      --muted: #b9c2df;
       --line: rgba(255,255,255,.10);
 
-      --gold: #ffd54a;
-      --gold-dark: #e0a800;
-      --gold-soft: rgba(255,213,74,.18);
+      --red: #ff2e43;
+      --red-dark: #d4142a;
+      --red-soft: rgba(255,46,67,.16);
 
-      --red: #ff2b2b;
-      --red-dark: #cf1010;
-      --red-soft: rgba(255,43,43,.18);
+      --blue: #13a8ff;
+      --blue-dark: #006ee6;
+      --blue-soft: rgba(19,168,255,.16);
 
-      --blue: #14a5ff;
-      --blue-dark: #0078d7;
-      --blue-soft: rgba(20,165,255,.18);
+      --gold: #ffd64d;
+      --gold-dark: #e3ae16;
+      --gold-soft: rgba(255,214,77,.16);
 
-      --purple: #9b4dff;
-      --purple-soft: rgba(155,77,255,.18);
+      --green: #28d66f;
+      --green-soft: rgba(40,214,111,.16);
 
-      --green: #2de16f;
-      --green-soft: rgba(45,225,111,.16);
-
-      --shadow: 0 18px 40px rgba(0,0,0,.35);
-      --shadow-strong: 0 28px 70px rgba(0,0,0,.55);
-      --container: 1160px;
+      --shadow: 0 18px 40px rgba(0,0,0,.32);
+      --shadow-strong: 0 28px 70px rgba(0,0,0,.48);
+      --container: 1180px;
     }
 
     * { box-sizing: border-box; }
@@ -81,10 +78,10 @@
       font-family: 'Cairo', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 0% 0%, rgba(255,213,74,.12), transparent 18%),
-        radial-gradient(circle at 100% 0%, rgba(20,165,255,.14), transparent 18%),
-        radial-gradient(circle at 50% 100%, rgba(255,43,43,.12), transparent 25%),
-        linear-gradient(180deg, #050505 0%, #0f0f0f 100%);
+        radial-gradient(circle at top left, rgba(255,46,67,.12), transparent 22%),
+        radial-gradient(circle at top right, rgba(19,168,255,.16), transparent 24%),
+        radial-gradient(circle at bottom center, rgba(255,214,77,.08), transparent 24%),
+        linear-gradient(180deg, #060914 0%, #0d1324 100%);
     }
 
     img, video { max-width: 100%; display: block; }
@@ -93,7 +90,7 @@
     .container { max-width: var(--container); margin: auto; padding: 0 16px; }
 
     .topbar {
-      background: linear-gradient(90deg, #ff2b2b, #ff8a00, #ffd54a, #14a5ff, #9b4dff);
+      background: linear-gradient(90deg, #ff2e43, #ff7a00, #13a8ff);
       color: #fff;
       text-align: center;
       padding: 12px;
@@ -104,9 +101,9 @@
     }
 
     .social-proof-bar {
-      background: linear-gradient(90deg, rgba(255,43,43,.12), rgba(20,165,255,.12), rgba(255,213,74,.12));
+      background: rgba(255,255,255,.03);
       border-bottom: 1px solid rgba(255,255,255,.08);
-      color: #fff;
+      color: #f5f7ff;
       padding: 10px 0;
       overflow: hidden;
       position: relative;
@@ -138,7 +135,7 @@
     }
 
     .shipping-bar {
-      background: linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d);
+      background: linear-gradient(90deg, rgba(19,168,255,.12), rgba(255,46,67,.10));
       color: #fff;
       padding: 11px 16px;
       display: flex;
@@ -147,14 +144,14 @@
       flex-wrap: wrap;
       font-size: 14px;
       font-weight: 800;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
     .header {
       position: sticky;
       top: 0;
       z-index: 999;
-      background: rgba(8,8,8,.85);
+      background: rgba(8,12,24,.82);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
@@ -170,83 +167,81 @@
     }
 
     .brand-name {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 900;
       line-height: 1.1;
-      background: linear-gradient(90deg, #ffd54a, #ff8a00, #ff2b2b);
+      background: linear-gradient(90deg, #ffffff, #8dd6ff 45%, #ffd64d 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 18px rgba(255,213,74,.18);
     }
 
     .brand-tag {
       font-size: 12px;
       font-weight: 700;
-      color: #dbdbdb;
+      color: #cad2ee;
     }
 
     .header-btn {
       background: linear-gradient(135deg, var(--red), var(--red-dark));
       color: #fff;
-      border-radius: 20px;
+      border-radius: 18px;
       padding: 13px 22px;
       font-size: 14px;
       font-weight: 900;
-      box-shadow: 0 16px 34px rgba(255,43,43,.28);
+      box-shadow: 0 18px 36px rgba(255,46,67,.26);
       border: 1px solid rgba(255,255,255,.10);
     }
 
     .section { padding: 18px 0; }
 
     .card {
-      background: linear-gradient(180deg, #141414, #0f0f0f);
-      border: 1px solid var(--line);
-      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(18,24,43,.96), rgba(13,18,35,.96));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 28px;
       box-shadow: var(--shadow);
     }
 
     .hero { padding: 24px 0 10px; }
 
     .hero-card {
-      padding: 24px;
+      padding: 26px;
       overflow: hidden;
       position: relative;
       background:
-        radial-gradient(circle at 10% 10%, rgba(255,213,74,.14), transparent 18%),
-        radial-gradient(circle at 90% 10%, rgba(20,165,255,.16), transparent 18%),
-        radial-gradient(circle at 50% 100%, rgba(255,43,43,.12), transparent 26%),
-        linear-gradient(180deg, #171717 0%, #0c0c0c 100%);
+        radial-gradient(circle at 0% 0%, rgba(255,46,67,.16), transparent 20%),
+        radial-gradient(circle at 100% 0%, rgba(19,168,255,.20), transparent 22%),
+        radial-gradient(circle at 50% 100%, rgba(255,214,77,.08), transparent 28%),
+        linear-gradient(180deg, #141b31 0%, #0b1020 100%);
     }
 
     .hero-card::before {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(135deg, transparent 0%, rgba(255,255,255,.02) 50%, transparent 100%);
+      background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,.03) 50%, transparent 100%);
       pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.02fr .98fr;
+      grid-template-columns: .92fr 1.08fr;
       gap: 26px;
-      align-items: start;
+      align-items: center;
     }
 
     .hero-urgent {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, rgba(255,43,43,.18), rgba(255,213,74,.18));
-      border: 1px solid rgba(255,213,74,.34);
-      color: #fff2ba;
+      background: linear-gradient(135deg, rgba(255,46,67,.18), rgba(255,214,77,.14));
+      border: 1px solid rgba(255,214,77,.28);
+      color: #ffeeb5;
       border-radius: 999px;
       padding: 10px 14px;
       font-size: 13px;
       font-weight: 900;
       margin-bottom: 14px;
-      box-shadow: 0 12px 24px rgba(255,213,74,.10);
+      box-shadow: 0 10px 24px rgba(255,46,67,.10);
     }
 
     .badge-row {
@@ -257,14 +252,13 @@
     }
 
     .badge {
-      background: linear-gradient(135deg, rgba(20,165,255,.18), rgba(155,77,255,.18));
-      border: 1px solid rgba(20,165,255,.34);
-      color: #bfe5ff;
+      background: linear-gradient(135deg, rgba(19,168,255,.18), rgba(19,168,255,.08));
+      border: 1px solid rgba(19,168,255,.34);
+      color: #a8deff;
       border-radius: 999px;
       padding: 9px 13px;
       font-size: 13px;
       font-weight: 800;
-      box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset;
     }
 
     .rating {
@@ -279,61 +273,39 @@
       color: var(--gold);
       font-size: 18px;
       letter-spacing: 2px;
-      text-shadow: 0 0 14px rgba(255,213,74,.34);
+      text-shadow: 0 0 14px rgba(255,214,77,.34);
     }
 
     .rating-text {
-      color: #e0e0e0;
+      color: #e2e8ff;
       font-size: 14px;
       font-weight: 800;
     }
 
-    .hero-inline-image {
-      margin: 14px 0 18px;
+    h1 {
+      margin: 0 0 14px;
+      font-size: 58px;
+      line-height: 1.08;
+      color: #fff;
+      font-weight: 900;
     }
 
-    .hero-inline-image img {
-      width: 100%;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 22px 48px rgba(0,0,0,.40);
-      object-fit: cover;
-      background: #fff;
-    }
-
-    .micro-trust {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 10px;
+    .hero-sub {
+      color: #d7def8;
+      font-size: 18px;
+      line-height: 1.9;
       margin: 0 0 16px;
     }
 
-    .micro-trust-item {
-      background: linear-gradient(180deg, #1b1b1b, #121212);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 18px;
-      padding: 12px;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 900;
-      color: #fff;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: 52px;
-      line-height: 1.2;
-      color: #fff;
-      font-weight: 900;
-    }
+    .hero-sub strong { color: #ffffff; }
 
     .hero-lead-box {
-      background: linear-gradient(135deg, rgba(255,213,74,.14), rgba(255,255,255,.03));
-      border: 1px solid rgba(255,213,74,.26);
-      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255,255,255,.05), rgba(19,168,255,.06));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
       padding: 16px 18px;
       margin-bottom: 16px;
-      color: #ededed;
+      color: #eff3ff;
       line-height: 1.9;
       font-size: 16px;
       font-weight: 700;
@@ -343,20 +315,13 @@
       display: block;
       margin-bottom: 6px;
       font-size: 17px;
-      color: #fff1ad;
-    }
-
-    .hero-sub {
-      color: #dfdfdf;
-      font-size: 18px;
-      line-height: 2;
-      margin: 0 0 16px;
+      color: #ffd64d;
     }
 
     .alert-strip {
-      background: linear-gradient(135deg, rgba(255,43,43,.22), rgba(255,213,74,.16));
-      border: 1px solid rgba(255,43,43,.30);
-      color: #fff0ee;
+      background: linear-gradient(135deg, rgba(255,46,67,.18), rgba(19,168,255,.14));
+      border: 1px solid rgba(255,46,67,.24);
+      color: #fff;
       border-radius: 18px;
       padding: 13px 15px;
       font-size: 14px;
@@ -372,7 +337,7 @@
     }
 
     .point {
-      background: linear-gradient(180deg, #1a1a1a, #121212);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       border: 1px solid rgba(255,255,255,.08);
       border-radius: 18px;
       padding: 13px 14px;
@@ -382,9 +347,9 @@
     }
 
     .price-box {
-      background: linear-gradient(180deg, #181818, #101010);
-      border: 1px solid rgba(255,213,74,.26);
-      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(18,24,43,.98), rgba(12,16,31,.98));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
       padding: 18px;
       position: relative;
       overflow: hidden;
@@ -399,7 +364,7 @@
       left: -40px;
       width: 180px;
       height: 180px;
-      background: radial-gradient(circle, rgba(255,213,74,.24), transparent 70%);
+      background: radial-gradient(circle, rgba(255,46,67,.20), transparent 70%);
       pointer-events: none;
     }
 
@@ -410,7 +375,7 @@
       right: -50px;
       width: 200px;
       height: 200px;
-      background: radial-gradient(circle, rgba(20,165,255,.16), transparent 70%);
+      background: radial-gradient(circle, rgba(19,168,255,.18), transparent 70%);
       pointer-events: none;
     }
 
@@ -419,7 +384,7 @@
       font-size: 20px;
       font-weight: 900;
       margin-bottom: 8px;
-      text-shadow: 0 0 12px rgba(255,213,74,.18);
+      text-shadow: 0 0 12px rgba(255,214,77,.18);
     }
 
     .price-row {
@@ -431,7 +396,7 @@
     }
 
     .old-price {
-      color: #9e9e9e;
+      color: #8e96b6;
       text-decoration: line-through;
       font-size: 24px;
       font-weight: 800;
@@ -440,16 +405,16 @@
 
     .new-price {
       color: var(--red);
-      font-size: 58px;
+      font-size: 62px;
       font-weight: 900;
       line-height: 1;
-      text-shadow: 0 0 24px rgba(255,43,43,.22);
+      text-shadow: 0 0 24px rgba(255,46,67,.24);
     }
 
     .save {
-      background: linear-gradient(135deg, rgba(255,43,43,.18), rgba(255,43,43,.10));
-      border: 1px solid rgba(255,43,43,.30);
-      color: #ffb7b7;
+      background: linear-gradient(135deg, rgba(255,46,67,.18), rgba(255,46,67,.08));
+      border: 1px solid rgba(255,46,67,.28);
+      color: #ffc0c7;
       border-radius: 999px;
       padding: 8px 12px;
       font-size: 13px;
@@ -457,7 +422,7 @@
     }
 
     .delivery, .micro-copy, .section-sub, .small-note, .mini-note {
-      color: #cccccc;
+      color: #cad2ee;
       line-height: 1.8;
     }
 
@@ -471,8 +436,8 @@
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
-      background: rgba(255,255,255,.02);
-      border: 1px dashed rgba(255,213,74,.50);
+      background: rgba(255,255,255,.03);
+      border: 1px dashed rgba(19,168,255,.46);
       border-radius: 18px;
       padding: 14px;
       margin-top: 14px;
@@ -485,11 +450,11 @@
     }
 
     .countdown {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 900;
-      color: var(--gold);
+      color: var(--blue);
       direction: ltr;
-      text-shadow: 0 0 12px rgba(255,213,74,.18);
+      text-shadow: 0 0 16px rgba(19,168,255,.24);
     }
 
     .cta-row {
@@ -500,7 +465,7 @@
     }
 
     .btn {
-      min-height: 60px;
+      min-height: 62px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -519,8 +484,8 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--red), var(--red-dark));
       color: #fff;
-      flex: 1.2;
-      box-shadow: 0 18px 34px rgba(255,43,43,.26);
+      flex: 1.25;
+      box-shadow: 0 18px 34px rgba(255,46,67,.28);
       position: relative;
       overflow: hidden;
     }
@@ -532,14 +497,9 @@
       right: -40%;
       width: 35%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.26), transparent);
       transform: skewX(-22deg);
       animation: shine 2.6s infinite;
-    }
-
-    @keyframes shine {
-      0% { right: -45%; }
-      100% { right: 120%; }
     }
 
     .btn-secondary {
@@ -547,14 +507,37 @@
       border: 1px solid rgba(255,255,255,.10);
       color: #fff;
       flex: 1;
-      box-shadow: 0 16px 30px rgba(20,165,255,.22);
+      box-shadow: 0 16px 30px rgba(19,168,255,.22);
+    }
+
+    @keyframes shine {
+      0% { right: -45%; }
+      100% { right: 120%; }
     }
 
     .hero-cta-note {
       margin-top: 10px;
       font-size: 13px;
-      color: #d8d8d8;
+      color: #dce4ff;
       font-weight: 800;
+    }
+
+    .micro-trust {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .micro-trust-item {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+      color: #fff;
     }
 
     .trust-grid {
@@ -565,7 +548,7 @@
     }
 
     .trust-item {
-      background: linear-gradient(180deg, #1b1b1b, #131313);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
       border: 1px solid rgba(255,255,255,.08);
       border-radius: 18px;
       padding: 14px;
@@ -576,55 +559,45 @@
     }
 
     .media-stack {
-      display: grid;
-      grid-template-columns: 1fr .42fr;
-      gap: 12px;
-      align-items: stretch;
+      display: block;
     }
 
-    .main-media, .side-media {
+    .main-media {
       position: relative;
     }
 
-    .main-media img, .side-media img {
+    .main-media img {
       width: 100%;
-      border-radius: 24px;
+      border-radius: 28px;
       object-fit: cover;
       background: #fff;
       border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 18px 38px rgba(0,0,0,.38);
+      box-shadow: 0 24px 54px rgba(0,0,0,.42);
+      min-height: 760px;
     }
-
-    .main-media img { min-height: 560px; }
 
     .floating-badge {
       position: absolute;
-      right: 14px;
-      top: 14px;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
+      right: 18px;
+      top: 18px;
+      background: linear-gradient(135deg, var(--blue), #6f38ff);
       border: 1px solid rgba(255,255,255,.12);
       border-radius: 18px;
-      padding: 10px 12px;
-      font-size: 13px;
+      padding: 12px 14px;
+      font-size: 14px;
       font-weight: 900;
       color: #fff;
-      box-shadow: 0 12px 26px rgba(0,0,0,.18);
+      box-shadow: 0 14px 30px rgba(0,0,0,.20);
     }
 
     .floating-badge.bottom {
       top: auto;
-      bottom: 14px;
-      background: linear-gradient(135deg, var(--gold), #ff9800);
+      bottom: 18px;
+      background: linear-gradient(135deg, var(--gold), #ff9f1a);
       color: #111;
     }
 
-    .side-col {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .side-media img { height: 274px; }
+    .side-col { display: none; }
 
     .section-card { padding: 24px; }
 
@@ -632,7 +605,7 @@
       margin: 0 0 10px;
       font-size: 34px;
       font-weight: 900;
-      background: linear-gradient(90deg, #ffd54a, #ff8a00, #ff2b2b);
+      background: linear-gradient(90deg, #ffffff, #a3dfff 50%, #ffd64d 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -671,29 +644,29 @@
     .faq-item,
     .objection-card,
     .order-pill {
-      background: linear-gradient(180deg, #1a1a1a, #121212);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
       border: 1px solid rgba(255,255,255,.08);
-      border-radius: 24px;
+      border-radius: 22px;
       padding: 18px;
     }
 
     .proof-box {
       text-align: center;
-      background: linear-gradient(135deg, rgba(255,213,74,.14), rgba(255,255,255,.03));
+      background: linear-gradient(135deg, rgba(19,168,255,.12), rgba(255,255,255,.03));
     }
 
     .proof-box .num {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 900;
-      color: var(--gold);
+      color: var(--blue);
       margin-bottom: 6px;
-      text-shadow: 0 0 12px rgba(255,213,74,.18);
+      text-shadow: 0 0 14px rgba(19,168,255,.18);
     }
 
     .proof-box .txt {
       font-size: 14px;
       font-weight: 800;
-      color: #d7d7d7;
+      color: #dbe4ff;
       line-height: 1.7;
     }
 
@@ -702,7 +675,7 @@
     .objection-card h3 {
       margin: 0 0 10px;
       font-size: 19px;
-      color: #8fd1ff;
+      color: #9eddff;
       font-weight: 800;
     }
 
@@ -712,7 +685,7 @@
     .review p,
     .faq-item p {
       margin: 0;
-      color: #d8d8d8;
+      color: #d8dff9;
       line-height: 1.9;
       font-size: 15px;
     }
@@ -720,7 +693,7 @@
     .benefit {
       font-weight: 700;
       color: #fff;
-      border-left: 3px solid var(--gold);
+      border-left: 3px solid var(--red);
     }
 
     .review .stars {
@@ -737,7 +710,7 @@
     .review-tag {
       margin-top: 4px;
       font-size: 13px;
-      color: #a5a5a5;
+      color: #aab5d8;
     }
 
     .faq-item strong {
@@ -757,9 +730,9 @@
     }
 
     .order-priority {
-      background: linear-gradient(135deg, rgba(255,213,74,.18), rgba(255,43,43,.18));
-      border: 1px solid rgba(255,213,74,.30);
-      color: #fff0b6;
+      background: linear-gradient(135deg, rgba(255,46,67,.18), rgba(19,168,255,.16));
+      border: 1px solid rgba(19,168,255,.24);
+      color: #fff;
       padding: 14px 16px;
       border-radius: 18px;
       font-size: 14px;
@@ -781,7 +754,7 @@
       border-radius: 16px;
       border: 1px solid rgba(255,255,255,.10);
       font-size: 16px;
-      background: #111111;
+      background: #0f1528;
       color: #fff;
       outline: none;
       text-align: left;
@@ -789,12 +762,12 @@
     }
 
     input::placeholder, textarea::placeholder {
-      color: #9d9d9d;
+      color: #9eabd4;
     }
 
     input:focus, textarea:focus, select:focus {
-      border-color: rgba(20,165,255,.75);
-      box-shadow: 0 0 0 4px rgba(20,165,255,.14);
+      border-color: rgba(19,168,255,.75);
+      box-shadow: 0 0 0 4px rgba(19,168,255,.14);
     }
 
     textarea {
@@ -814,7 +787,7 @@
       font-size: 19px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 18px 34px rgba(255,43,43,.26);
+      box-shadow: 0 18px 34px rgba(255,46,67,.28);
       position: relative;
       overflow: hidden;
     }
@@ -846,15 +819,15 @@
     }
 
     .status-success {
-      background: rgba(45,225,111,.12);
-      color: #95f0b5;
-      border: 1px solid rgba(45,225,111,.24);
+      background: rgba(40,214,111,.12);
+      color: #a9f0c2;
+      border: 1px solid rgba(40,214,111,.24);
     }
 
     .status-error {
-      background: rgba(255,43,43,.12);
-      color: #ffb4b4;
-      border: 1px solid rgba(255,43,43,.24);
+      background: rgba(255,46,67,.12);
+      color: #ffc1c8;
+      border: 1px solid rgba(255,46,67,.24);
     }
 
     .sticky-cta {
@@ -871,15 +844,15 @@
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      min-height: 74px;
-      background: linear-gradient(135deg, #121212, #1a1a1a);
+      min-height: 76px;
+      background: linear-gradient(135deg, #131a31, #0d1326);
       color: #fff;
       border-radius: 24px;
       font-size: 16px;
       font-weight: 900;
       padding: 12px 16px;
       box-shadow: 0 22px 44px rgba(0,0,0,.42);
-      border: 1px solid rgba(255,213,74,.26);
+      border: 1px solid rgba(19,168,255,.24);
     }
 
     .sticky-main {
@@ -892,18 +865,18 @@
       font-size: 12px;
       font-weight: 700;
       opacity: .92;
-      color: #e0e0e0;
+      color: #dfe6ff;
     }
 
     .sticky-price {
-      background: linear-gradient(135deg, var(--gold), #ff9800);
-      color: #111;
-      padding: 8px 12px;
+      background: linear-gradient(135deg, var(--red), #ff6a2b);
+      color: #fff;
+      padding: 10px 14px;
       border-radius: 14px;
       white-space: nowrap;
       font-size: 15px;
       font-weight: 900;
-      box-shadow: 0 10px 18px rgba(255,213,74,.18);
+      box-shadow: 0 10px 18px rgba(255,46,67,.18);
     }
 
     .live-orders-wrap {
@@ -917,7 +890,7 @@
     .live-order-toast {
       min-width: 290px;
       max-width: 340px;
-      background: rgba(18,18,18,.98);
+      background: rgba(16,22,41,.98);
       border: 1px solid rgba(255,255,255,.08);
       box-shadow: 0 18px 38px rgba(0,0,0,.28);
       border-radius: 18px;
@@ -944,7 +917,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, rgba(255,43,43,.18), rgba(255,213,74,.18));
+      background: linear-gradient(135deg, rgba(255,46,67,.18), rgba(19,168,255,.18));
       font-size: 20px;
     }
 
@@ -957,7 +930,7 @@
 
     .live-order-sub {
       font-size: 13px;
-      color: #d3d3d3;
+      color: #d9e1ff;
       font-weight: 700;
       line-height: 1.5;
     }
@@ -965,13 +938,13 @@
     .live-order-time {
       margin-top: 5px;
       font-size: 12px;
-      color: #9c9c9c;
+      color: #9aa7d0;
       font-weight: 800;
     }
 
     footer {
-      background: linear-gradient(90deg, #050505, #111111);
-      color: #d8d8d8;
+      background: linear-gradient(90deg, #080c18, #11172d);
+      color: #d8dff7;
       text-align: center;
       padding: 24px 12px;
       margin-top: 24px;
@@ -1000,13 +973,10 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .media-stack { grid-template-columns: 1fr; }
-      .side-col { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
-      .side-media img { height: 220px; }
       .quick-points { grid-template-columns: 1fr; }
       .form-grid { grid-template-columns: 1fr; }
       .main-media img { min-height: auto; }
-      h1 { font-size: 40px; }
+      h1 { font-size: 42px; }
       .sticky-cta { display: block; }
       .live-orders-wrap {
         left: 10px;
@@ -1027,15 +997,15 @@
       .shipping-bar { gap: 10px; font-size: 13px; }
       .card, .section-card, .order-box { border-radius: 24px; }
       .old-price { font-size: 20px; }
-      .new-price { font-size: 44px; }
+      .new-price { font-size: 46px; }
       .trust-grid, .order-highlight, .proof-strip, .micro-trust { grid-template-columns: 1fr; }
-      .side-col { grid-template-columns: 1fr; }
       .section-title { font-size: 28px; }
-      h1 { font-size: 34px; line-height: 1.28; }
+      h1 { font-size: 36px; line-height: 1.18; }
       .hero-sub { font-size: 17px; }
       .sticky-cta a { min-height: 66px; font-size: 15px; }
       .submit-btn { font-size: 17px; padding: 16px; }
-      .hero-inline-image img { border-radius: 18px; }
+      .hero-inline-image img,
+      .main-media img { border-radius: 20px; }
     }
   </style>
 </head>
@@ -1112,16 +1082,6 @@
               <div class="rating-text">A fun way to help your child learn letters, words, numbers, and listening skills</div>
             </div>
 
-            <div class="hero-inline-image">
-              <img src="study-book-hero.jpg" alt="Study Book for children" />
-            </div>
-
-            <div class="micro-trust">
-              <div class="micro-trust-item">✅ Cash on Delivery</div>
-              <div class="micro-trust-item">✅ UAE Shipping</div>
-              <div class="micro-trust-item">✅ 30-Day Guarantee</div>
-            </div>
-
             <h1>Make learning at home more fun for your child</h1>
 
             <div class="hero-lead-box">
@@ -1171,6 +1131,12 @@
 
             <div class="hero-cta-note">✅ Cash on delivery • ✅ Fast shipping • ✅ Easy direct ordering</div>
 
+            <div class="micro-trust">
+              <div class="micro-trust-item">✅ Cash on Delivery</div>
+              <div class="micro-trust-item">✅ UAE Shipping</div>
+              <div class="micro-trust-item">✅ 30-Day Guarantee</div>
+            </div>
+
             <div class="trust-grid">
               <div class="trust-item">✅ Fast Shipping</div>
               <div class="trust-item">✅ Cash on Delivery</div>
@@ -1184,14 +1150,6 @@
               <img src="study-book-2.jpg" alt="Child using the Study Book" />
               <div class="floating-badge">⚡ Best Seller</div>
               <div class="floating-badge bottom">⭐ 30-Day Replacement</div>
-            </div>
-            <div class="side-col">
-              <div class="side-media">
-                <img src="study-book-3.jpg" alt="Study Book details" />
-              </div>
-              <div class="side-media">
-                <img src="study-book-4.jpg" alt="Study Book inside pages" />
-              </div>
             </div>
           </div>
         </div>
