@@ -421,21 +421,27 @@
           </div>
 
           <div class="summary-item">
-            <div class="summary-icon">🏷️</div>
-            <div class="summary-title">SKU</div>
-            <div class="summary-text" id="productSku">SIEO-N-TY-ZAM</div>
+            <div class="summary-icon">🔢</div>
+            <div class="summary-title">Quantity</div>
+            <div class="summary-text" id="productQuantity">1 Piece</div>
           </div>
 
           <div class="summary-item">
-            <div class="summary-icon">📍</div>
-            <div class="summary-title">Emirate</div>
-            <div class="summary-text" id="customerCity">Not specified</div>
+            <div class="summary-icon">🏷️</div>
+            <div class="summary-title">SKU</div>
+            <div class="summary-text" id="productSku">SIEO-N-TY-ZAM</div>
           </div>
         </div>
       </div>
 
       <div class="section">
         <div class="summary-grid">
+          <div class="summary-item">
+            <div class="summary-icon">📍</div>
+            <div class="summary-title">Emirate</div>
+            <div class="summary-text" id="customerCity">Not specified</div>
+          </div>
+
           <div class="summary-item">
             <div class="summary-icon">👤</div>
             <div class="summary-title">Customer Name</div>
@@ -449,12 +455,6 @@
           </div>
 
           <div class="summary-item">
-            <div class="summary-icon">💵</div>
-            <div class="summary-title">Payment Method</div>
-            <div class="summary-text">Cash on Delivery</div>
-          </div>
-
-          <div class="summary-item">
             <div class="summary-icon">🔁</div>
             <div class="summary-title">Guarantee</div>
             <div class="summary-text" id="warrantyNote">30-day replacement guarantee</div>
@@ -463,7 +463,7 @@
       </div>
 
       <div class="section">
-        <div class="notice-box">
+        <div class="notice-box" id="orderNoticeBox">
           Please keep your phone available, as our team will contact you to confirm your order before shipping.
           If we are unable to reach you, your shipment may be delayed.
         </div>
@@ -494,6 +494,7 @@
     const defaults = {
       product: "Study Book - Intellectual Learning Book",
       price: "75 AED",
+      quantity: 1,
       sku: "SIEO-N-TY-ZAM",
       city: "Not specified",
       name: "Valued Customer",
@@ -508,6 +509,7 @@
       return {
         product: params.get("product") || "",
         price: params.get("price") || "",
+        quantity: params.get("quantity") || "",
         sku: params.get("sku") || "",
         city: params.get("city") || "",
         name: params.get("name") || "",
@@ -534,6 +536,7 @@
       return {
         product: query.product || stored.product || defaults.product,
         price: query.price || stored.price || defaults.price,
+        quantity: Number(query.quantity || stored.quantity || defaults.quantity),
         sku: query.sku || stored.product_sku || stored.sku || defaults.sku,
         city: query.city || stored.city || defaults.city,
         name: query.name || stored.name || defaults.name,
@@ -549,11 +552,16 @@
       if (el) el.textContent = value;
     }
 
+    function getQuantityLabel(quantity) {
+      return Number(quantity) === 2 ? "2 Pieces" : "1 Piece";
+    }
+
     const order = getOrderData();
 
     setText("productName", order.product);
     setText("productNameLead", order.product);
     setText("productPrice", order.price);
+    setText("productQuantity", getQuantityLabel(order.quantity));
     setText("productSku", order.sku);
     setText("customerCity", order.city);
     setText("customerName", order.name);
@@ -575,6 +583,11 @@
     const imageEl = document.getElementById("thankYouImage");
     if (imageEl && order.image) {
       imageEl.src = order.image;
+    }
+
+    const orderNoticeBox = document.getElementById("orderNoticeBox");
+    if (orderNoticeBox && Number(order.quantity) === 2) {
+      orderNoticeBox.textContent = "Your order for 2 pieces has been received successfully. Please keep your phone available, as our team will contact you to confirm your order before shipping.";
     }
 
     document.title = `Thank You | ${order.product}`;
