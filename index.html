@@ -1074,7 +1074,7 @@
               <span class="mini-note">Perfect for families in the UAE looking for a more enjoyable and engaging home-learning experience for kids.</span>
             </p>
 
-            <div class="alert-strip">📚 Special price today: only 75 AED instead of 89 AED — with cash on delivery and a 30-day replacement guarantee</div>
+            <div class="alert-strip" id="dynamicAlertStrip">📚 Special price today: only 75 AED instead of 89 AED — with cash on delivery and a 30-day replacement guarantee</div>
 
             <div class="quick-points">
               <div class="point">✅ Interactive sound learning</div>
@@ -1086,9 +1086,9 @@
             <div class="price-box">
               <div class="offer">🔥 Special UAE Offer</div>
               <div class="price-row">
-                <div class="new-price">75 AED</div>
-                <div class="old-price">89 AED</div>
-                <div class="save">Save 14 AED</div>
+                <div class="new-price" id="dynamicPrice">75 AED</div>
+                <div class="old-price" id="dynamicOldPrice">89 AED</div>
+                <div class="save" id="dynamicSave">Save 14 AED</div>
               </div>
               <div class="delivery">Fast shipping across the UAE — suitable for children aged 3 and above</div>
               <div class="mini-note">🔁 30-day replacement guarantee on all products</div>
@@ -1104,7 +1104,7 @@
             </div>
 
             <div class="cta-row">
-              <a href="#order" class="btn btn-primary">Order Now for 75 AED</a>
+              <a href="#order" class="btn btn-primary" id="heroPrimaryBtn">Order Now for 75 AED</a>
               <a href="#details" class="btn btn-secondary">View Details</a>
             </div>
 
@@ -1146,8 +1146,8 @@
               <div class="txt">Suitable for children aged 3 years and above</div>
             </div>
             <div class="proof-box">
-              <div class="num">75</div>
-              <div class="txt">AED today instead of 89 AED with cash on delivery</div>
+              <div class="num" id="proofPriceNum">75</div>
+              <div class="txt" id="proofPriceText">AED today instead of 89 AED with cash on delivery</div>
             </div>
             <div class="proof-box">
               <div class="num">30</div>
@@ -1350,7 +1350,7 @@
           <div class="order-priority">📦 Orders are confirmed by phone and then shipped quickly across the UAE — cash on delivery available</div>
 
           <div class="order-highlight">
-            <div class="order-pill">💰 Price: 75 AED instead of 89 AED</div>
+            <div class="order-pill" id="orderHighlightPrice">💰 Price: 75 AED instead of 89 AED</div>
             <div class="order-pill">🚚 Fast UAE Shipping</div>
             <div class="order-pill">💵 Cash on Delivery</div>
             <div class="order-pill">🔁 30-Day Replacement</div>
@@ -1360,6 +1360,12 @@
             <div class="form-grid">
               <input id="name" type="text" placeholder="Full Name (English only)" required inputmode="text" pattern="^[A-Za-z ]+$" title="Please enter your name in English only" />
               <input id="phone" type="tel" placeholder="05XXXXXXXX" required inputmode="numeric" maxlength="10" pattern="^05\d{8}$" title="Phone number must start with 05 and contain 10 digits" />
+
+              <select id="quantity" required>
+                <option value="1">1 Piece — 75 AED</option>
+                <option value="2">2 Pieces — 120 AED</option>
+              </select>
+
               <select id="city" required>
                 <option value="">Select Emirate</option>
                 <option>Dubai</option>
@@ -1371,6 +1377,7 @@
                 <option>Umm Al Quwain</option>
                 <option>Al Ain</option>
               </select>
+
               <input id="address" type="text" placeholder="Full Address" required />
               <textarea id="notes" placeholder="Additional Notes (Optional)"></textarea>
             </div>
@@ -1391,12 +1398,12 @@
   </main>
 
   <div class="sticky-cta">
-    <a href="#order">
+    <a href="#order" id="stickyOrderBtn">
       <span class="sticky-main">
         Order Now Before the Offer Ends
         <small>Cash on delivery + fast shipping</small>
       </span>
-      <span class="sticky-price">75 AED</span>
+      <span class="sticky-price" id="stickyPrice">75 AED</span>
     </a>
   </div>
 
@@ -1406,6 +1413,65 @@
 
   <script>
     const scriptURL = "https://script.google.com/macros/s/AKfycby_dVGsD1tA6KBH7tem9B_1xXIdLZKAy2P75Ax0LuLTzQpFZGQk8lpFLjEr0le15zuQ/exec";
+
+    function getOfferByQuantity(qty) {
+      if (String(qty) === "2") {
+        return {
+          quantity: 2,
+          priceText: "120 AED",
+          priceValue: 120,
+          oldPriceText: "150 AED",
+          saveText: "Save 30 AED",
+          proofNum: "120",
+          proofText: "AED for 2 pieces instead of 150 AED with cash on delivery",
+          highlightText: "💰 Price: 2 Pieces for 120 AED instead of 150 AED",
+          alertText: "📚 Special price today: 2 pieces for only 120 AED instead of 150 AED — with cash on delivery and a 30-day replacement guarantee",
+          heroBtnText: "Order 2 Pieces for 120 AED"
+        };
+      }
+
+      return {
+        quantity: 1,
+        priceText: "75 AED",
+        priceValue: 75,
+        oldPriceText: "89 AED",
+        saveText: "Save 14 AED",
+        proofNum: "75",
+        proofText: "AED today instead of 89 AED with cash on delivery",
+        highlightText: "💰 Price: 75 AED instead of 89 AED",
+        alertText: "📚 Special price today: only 75 AED instead of 89 AED — with cash on delivery and a 30-day replacement guarantee",
+        heroBtnText: "Order Now for 75 AED"
+      };
+    }
+
+    function updateOfferUI() {
+      const quantityEl = document.getElementById("quantity");
+      if (!quantityEl) return;
+
+      const offer = getOfferByQuantity(quantityEl.value);
+
+      const dynamicPrice = document.getElementById("dynamicPrice");
+      const dynamicOldPrice = document.getElementById("dynamicOldPrice");
+      const dynamicSave = document.getElementById("dynamicSave");
+      const submitBtn = document.getElementById("submitBtn");
+      const stickyPrice = document.getElementById("stickyPrice");
+      const orderHighlightPrice = document.getElementById("orderHighlightPrice");
+      const dynamicAlertStrip = document.getElementById("dynamicAlertStrip");
+      const proofPriceNum = document.getElementById("proofPriceNum");
+      const proofPriceText = document.getElementById("proofPriceText");
+      const heroPrimaryBtn = document.getElementById("heroPrimaryBtn");
+
+      if (dynamicPrice) dynamicPrice.textContent = offer.priceText;
+      if (dynamicOldPrice) dynamicOldPrice.textContent = offer.oldPriceText;
+      if (dynamicSave) dynamicSave.textContent = offer.saveText;
+      if (submitBtn) submitBtn.textContent = `Order Now — ${offer.priceText} 📚`;
+      if (stickyPrice) stickyPrice.textContent = offer.priceText;
+      if (orderHighlightPrice) orderHighlightPrice.textContent = offer.highlightText;
+      if (dynamicAlertStrip) dynamicAlertStrip.textContent = offer.alertText;
+      if (proofPriceNum) proofPriceNum.textContent = offer.proofNum;
+      if (proofPriceText) proofPriceText.textContent = offer.proofText;
+      if (heroPrimaryBtn) heroPrimaryBtn.textContent = offer.heroBtnText;
+    }
 
     function formatCountdown(diff) {
       const hours = Math.floor(diff / (1000 * 60 * 60));
@@ -1455,18 +1521,27 @@
       this.value = this.value.replace(/\D/g, "").slice(0, 10);
     });
 
+    const quantityField = document.getElementById("quantity");
+    if (quantityField) {
+      quantityField.addEventListener("change", updateOfferUI);
+      updateOfferUI();
+    }
+
     let initiateCheckoutTracked = false;
 
     function trackInitiateCheckout() {
       if (initiateCheckoutTracked || typeof fbq === "undefined") return;
 
+      const qty = document.getElementById("quantity") ? document.getElementById("quantity").value : "1";
+      const offer = getOfferByQuantity(qty);
+
       fbq("track", "InitiateCheckout", {
         content_name: "Study Book - Intellectual Learning Book",
         content_ids: ["SIEO-N-TY-ZAM"],
         content_type: "product",
-        value: 75,
+        value: offer.priceValue,
         currency: "AED",
-        num_items: 1
+        num_items: offer.quantity
       });
 
       initiateCheckoutTracked = true;
@@ -1557,6 +1632,7 @@
         product: data.product,
         price: data.price,
         sku: data.product_sku,
+        quantity: data.quantity,
         warranty_note: data.warranty_note,
         notes: data.notes,
         image: data.image
@@ -1576,9 +1652,12 @@
 
       const name = document.getElementById("name").value.trim();
       const phone = document.getElementById("phone").value.trim();
+      const quantity = document.getElementById("quantity").value;
       const city = document.getElementById("city").value.trim() || "Not specified";
       const address = document.getElementById("address").value.trim() || "Not specified";
       const notes = document.getElementById("notes").value.trim() || "No notes";
+
+      const offer = getOfferByQuantity(quantity);
 
       const englishNameRegex = /^[A-Za-z ]+$/;
       const phoneRegex = /^05\d{8}$/;
@@ -1586,14 +1665,14 @@
       if (!englishNameRegex.test(name)) {
         alert("Please enter your name in English only.");
         submitBtn.disabled = false;
-        submitBtn.textContent = "Order Now — 75 AED 📚";
+        submitBtn.textContent = `Order Now — ${offer.priceText} 📚`;
         return;
       }
 
       if (!phoneRegex.test(phone)) {
         alert("Please enter a valid UAE phone number starting with 05 and containing 10 digits.");
         submitBtn.disabled = false;
-        submitBtn.textContent = "Order Now — 75 AED 📚";
+        submitBtn.textContent = `Order Now — ${offer.priceText} 📚`;
         return;
       }
 
@@ -1605,10 +1684,10 @@
         notes: notes,
         product: "Study Book - Intellectual Learning Book",
         product_sku: "SIEO-N-TY-ZAM",
-        price: "75 AED",
-        quantity: 1,
+        price: offer.priceText,
+        quantity: offer.quantity,
         shipping_charges: 0,
-        discount: 14,
+        discount: offer.quantity === 2 ? 30 : 14,
         warranty_note: "30-day replacement guarantee on all products",
         source: "Study Book Landing Page",
         pageUrl: window.location.href
@@ -1622,7 +1701,8 @@
         notes: notes,
         product: "Study Book - Intellectual Learning Book",
         product_sku: "SIEO-N-TY-ZAM",
-        price: "75 AED",
+        price: offer.priceText,
+        quantity: offer.quantity,
         warranty_note: "30-day replacement guarantee on all products",
         image: "study-book-thankyou.jpg"
       };
@@ -1634,17 +1714,18 @@
 
         if (typeof fbq !== "undefined") {
           fbq("track", "Purchase", {
-            value: 75,
+            value: offer.priceValue,
             currency: "AED",
             content_name: "Study Book - Intellectual Learning Book",
             content_ids: ["SIEO-N-TY-ZAM"],
             content_type: "product",
-            num_items: 1
+            num_items: offer.quantity
           });
         }
 
         showSuccess();
         document.getElementById("orderForm").reset();
+        updateOfferUI();
 
         setTimeout(() => {
           window.location.href = buildThankYouUrl(thankYouData);
@@ -1654,7 +1735,7 @@
         console.error("Order submit error:", error);
         showError();
         submitBtn.disabled = false;
-        submitBtn.textContent = "Order Now — 75 AED 📚";
+        submitBtn.textContent = `Order Now — ${offer.priceText} 📚`;
       }
     });
   </script>
