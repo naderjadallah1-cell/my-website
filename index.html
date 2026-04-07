@@ -39,37 +39,38 @@
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1721589715914524&ev=PageView&noscript=1" />
   </noscript>
 
-  <meta name="description" content="Study Book is a premium interactive educational book for kids in the UAE. Helps children learn letters, words, sounds, and listening skills in a fun way. 1 piece for 75 AED or 2 pieces for 120 AED with cash on delivery." />
+  <meta name="description" content="Study Book is a premium interactive educational book for kids in the UAE. Helps children learn letters, words, sounds, and listening skills in a fun and engaging way. 1 piece for 75 AED or 2 pieces for 120 AED with cash on delivery." />
 
   <style>
     :root {
       --bg: #fcfaf7;
       --bg-soft: #fffdfb;
       --white: #ffffff;
-      --text: #1b1530;
-      --muted: #6a6478;
-      --line: #ece7f3;
+      --text: #171326;
+      --muted: #6b6579;
+      --line: #ece7f2;
 
-      --primary: #6f42f5;
-      --primary-dark: #5531c7;
-      --primary-soft: #f4efff;
+      --primary: #6e45ff;
+      --primary-dark: #4d2fd0;
+      --primary-soft: #f2edff;
 
-      --accent: #ff6a3d;
-      --accent-dark: #e44d20;
-      --accent-soft: #fff1eb;
+      --accent: #ff6233;
+      --accent-dark: #de4517;
+      --accent-soft: #fff0e9;
 
-      --gold: #f5b300;
-      --gold-dark: #d99600;
+      --gold: #f7b500;
+      --gold-dark: #da9800;
       --gold-soft: #fff6d8;
 
-      --green: #19b66b;
-      --green-soft: #ebfaf2;
+      --green: #18b76c;
+      --green-soft: #e9faF2;
 
-      --dark: #151021;
-      --dark-2: #21192f;
+      --dark: #120f1c;
+      --dark-2: #21182f;
+      --danger: #ff3b30;
 
-      --shadow: 0 12px 32px rgba(21,16,33,.08);
-      --shadow-strong: 0 24px 56px rgba(21,16,33,.14);
+      --shadow: 0 14px 36px rgba(18,15,28,.08);
+      --shadow-strong: 0 26px 60px rgba(18,15,28,.16);
       --container: 1180px;
       --radius-xl: 30px;
       --radius-lg: 22px;
@@ -83,9 +84,9 @@
       font-family: 'Cairo', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(111,66,245,.08), transparent 24%),
-        radial-gradient(circle at top left, rgba(255,106,61,.08), transparent 22%),
-        linear-gradient(180deg, #fcfaf7 0%, #ffffff 48%, #fffdfb 100%);
+        radial-gradient(circle at top right, rgba(110,69,255,.08), transparent 24%),
+        radial-gradient(circle at top left, rgba(255,98,51,.08), transparent 22%),
+        linear-gradient(180deg, #fcfaf7 0%, #ffffff 50%, #fffdfb 100%);
     }
 
     img, video { max-width: 100%; display: block; }
@@ -95,7 +96,7 @@
     .section { padding: 18px 0; }
 
     .topbar {
-      background: linear-gradient(90deg, var(--dark), var(--dark-2));
+      background: linear-gradient(90deg, var(--danger), #ff6a57, var(--danger));
       color: #fff;
       text-align: center;
       padding: 11px 14px;
@@ -155,8 +156,8 @@
     .header-btn,
     .btn,
     .submit-btn,
-    .bundle-card {
-      transition: .2s ease;
+    .offer-card {
+      transition: .22s ease;
     }
 
     .header-btn {
@@ -166,19 +167,19 @@
       padding: 12px 20px;
       font-size: 14px;
       font-weight: 900;
-      box-shadow: 0 14px 28px rgba(255,106,61,.18);
+      box-shadow: 0 14px 28px rgba(255,98,51,.18);
       border: 1px solid rgba(255,255,255,.14);
     }
 
     .header-btn:hover,
     .btn:hover,
     .submit-btn:hover,
-    .bundle-card:hover {
+    .offer-card:hover {
       transform: translateY(-2px);
     }
 
     .card {
-      background: rgba(255,255,255,.96);
+      background: rgba(255,255,255,.97);
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
@@ -191,14 +192,14 @@
       overflow: hidden;
       position: relative;
       background:
-        radial-gradient(circle at 8% 8%, rgba(245,179,0,.12), transparent 16%),
-        radial-gradient(circle at 95% 10%, rgba(111,66,245,.12), transparent 18%),
+        radial-gradient(circle at 8% 8%, rgba(247,181,0,.12), transparent 16%),
+        radial-gradient(circle at 95% 10%, rgba(110,69,255,.12), transparent 18%),
         linear-gradient(180deg, #fffdfb 0%, #ffffff 100%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.02fr .98fr;
+      grid-template-columns: 1.05fr .95fr;
       gap: 30px;
       align-items: center;
     }
@@ -207,7 +208,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, var(--gold-soft), #fff2c1);
+      background: linear-gradient(135deg, var(--gold-soft), #fff1bf);
       border: 1px solid #ffd66e;
       color: #7a5200;
       border-radius: 999px;
@@ -256,8 +257,8 @@
 
     h1 {
       margin: 0 0 14px;
-      font-size: 54px;
-      line-height: 1.08;
+      font-size: 58px;
+      line-height: 1.05;
       color: var(--dark);
       font-weight: 900;
     }
@@ -270,20 +271,20 @@
       line-height: 1.5;
     }
 
-    .hero-lead-box {
-      background: linear-gradient(135deg, #fffaf1, #f8f3ff);
-      border: 1px solid #ece0ff;
+    .hero-problem-box {
+      background: linear-gradient(135deg, #fff4f1, #fff9ef);
+      border: 1px solid #ffd8c9;
       border-left: 5px solid var(--accent);
       border-radius: 22px;
       padding: 16px 18px;
       margin-bottom: 16px;
-      color: #322846;
+      color: #392b2b;
       line-height: 1.9;
       font-size: 16px;
       font-weight: 700;
     }
 
-    .hero-lead-box strong {
+    .hero-problem-box strong {
       display: block;
       margin-bottom: 6px;
       font-size: 17px;
@@ -291,7 +292,7 @@
     }
 
     .hero-sub {
-      color: #403853;
+      color: #413853;
       font-size: 18px;
       line-height: 1.95;
       margin: 0 0 16px;
@@ -300,8 +301,8 @@
     .hero-sub strong { color: var(--dark); }
 
     .alert-strip {
-      background: linear-gradient(135deg, var(--accent-soft), #fff7d8);
-      border: 1px solid #ffd5c4;
+      background: linear-gradient(135deg, var(--accent-soft), #fff7d7);
+      border: 1px solid #ffd4c4;
       color: #8e2b0f;
       border-radius: 18px;
       padding: 13px 15px;
@@ -327,14 +328,14 @@
       color: #251d33;
     }
 
-    .bundle-grid {
+    .offer-grid {
       display: grid;
       grid-template-columns: repeat(2,1fr);
       gap: 14px;
       margin: 18px 0;
     }
 
-    .bundle-card {
+    .offer-card {
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -343,13 +344,13 @@
       box-shadow: var(--shadow);
     }
 
-    .bundle-card.featured {
+    .offer-card.best {
       border: 2px solid var(--gold);
-      background: linear-gradient(180deg, #fffdf4, #ffffff);
-      box-shadow: 0 18px 40px rgba(245,179,0,.12);
+      background: linear-gradient(180deg, #fffdf3, #ffffff);
+      box-shadow: 0 18px 42px rgba(247,181,0,.14);
     }
 
-    .bundle-tag {
+    .offer-pill {
       position: absolute;
       top: 14px;
       right: 14px;
@@ -361,22 +362,22 @@
       font-weight: 900;
     }
 
-    .bundle-title {
+    .offer-title {
       font-size: 18px;
       font-weight: 900;
       color: var(--dark);
       margin-bottom: 6px;
     }
 
-    .bundle-price {
-      font-size: 34px;
+    .offer-price {
+      font-size: 36px;
       font-weight: 900;
       color: var(--accent-dark);
       line-height: 1;
       margin-bottom: 8px;
     }
 
-    .bundle-old {
+    .offer-old {
       font-size: 16px;
       font-weight: 800;
       color: #9aa2b4;
@@ -384,7 +385,7 @@
       margin-bottom: 10px;
     }
 
-    .bundle-desc {
+    .offer-desc {
       font-size: 14px;
       line-height: 1.8;
       color: #5d6678;
@@ -410,7 +411,7 @@
       right: -30px;
       width: 180px;
       height: 180px;
-      background: radial-gradient(circle, rgba(245,179,0,.20), transparent 70%);
+      background: radial-gradient(circle, rgba(247,181,0,.20), transparent 70%);
       pointer-events: none;
     }
 
@@ -421,11 +422,11 @@
       left: -40px;
       width: 180px;
       height: 180px;
-      background: radial-gradient(circle, rgba(111,66,245,.16), transparent 70%);
+      background: radial-gradient(circle, rgba(110,69,255,.16), transparent 70%);
       pointer-events: none;
     }
 
-    .offer {
+    .offer-headline {
       color: #ffd76d;
       font-size: 20px;
       font-weight: 900;
@@ -529,8 +530,8 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-dark));
       color: #fff;
-      flex: 1.3;
-      box-shadow: 0 16px 34px rgba(255,106,61,.22);
+      flex: 1.35;
+      box-shadow: 0 16px 34px rgba(255,98,51,.24);
     }
 
     .btn-secondary {
@@ -538,7 +539,7 @@
       border: 1px solid rgba(255,255,255,.10);
       color: #fff;
       flex: 1;
-      box-shadow: 0 16px 30px rgba(111,66,245,.18);
+      box-shadow: 0 16px 30px rgba(110,69,255,.18);
     }
 
     .hero-cta-note {
@@ -556,7 +557,8 @@
     .reviews,
     .faq-grid,
     .objection-cards,
-    .order-highlight {
+    .order-highlight,
+    .value-stack {
       display: grid;
       gap: 14px;
     }
@@ -564,6 +566,7 @@
     .micro-trust { grid-template-columns: repeat(3,1fr); margin-top: 18px; }
     .proof-strip, .order-highlight { grid-template-columns: repeat(4,1fr); }
     .features, .results-cards, .benefits, .reviews, .faq-grid, .objection-cards { grid-template-columns: repeat(3,1fr); }
+    .value-stack { grid-template-columns: repeat(2,1fr); }
 
     .micro-trust-item,
     .proof-box,
@@ -573,7 +576,8 @@
     .review,
     .faq-item,
     .objection-card,
-    .order-pill {
+    .order-pill,
+    .value-item {
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -637,7 +641,8 @@
 
     .feature h3,
     .result-card h3,
-    .objection-card h3 {
+    .objection-card h3,
+    .value-item h3 {
       margin: 0 0 10px;
       font-size: 19px;
       color: var(--primary-dark);
@@ -648,7 +653,8 @@
     .result-card p,
     .objection-card p,
     .review p,
-    .faq-item p {
+    .faq-item p,
+    .value-item p {
       margin: 0;
       color: #556072;
       line-height: 1.9;
@@ -673,7 +679,7 @@
       top: -16px;
       right: 12px;
       font-size: 90px;
-      color: rgba(111,66,245,.08);
+      color: rgba(110,69,255,.08);
       font-weight: 900;
       line-height: 1;
     }
@@ -717,8 +723,8 @@
       object-fit: cover;
       background: #fff;
       border: 1px solid #efe8f7;
-      box-shadow: 0 26px 56px rgba(21,16,33,.16);
-      min-height: 760px;
+      box-shadow: 0 26px 56px rgba(18,15,28,.16);
+      min-height: 780px;
     }
 
     .floating-badge {
@@ -732,7 +738,7 @@
       font-size: 14px;
       font-weight: 900;
       color: #fff;
-      box-shadow: 0 12px 26px rgba(111,66,245,.16);
+      box-shadow: 0 12px 26px rgba(110,69,255,.16);
     }
 
     .floating-badge.bottom {
@@ -740,19 +746,19 @@
       bottom: 18px;
       background: linear-gradient(135deg, var(--gold), var(--gold-dark));
       color: #161616;
-      box-shadow: 0 12px 26px rgba(245,179,0,.18);
+      box-shadow: 0 12px 26px rgba(247,181,0,.18);
     }
 
     .image-proof-card {
       position: absolute;
       left: 18px;
       bottom: 110px;
-      width: min(280px, 72%);
+      width: min(290px, 72%);
       background: rgba(255,255,255,.97);
-      border: 1px solid rgba(111,66,245,.12);
+      border: 1px solid rgba(110,69,255,.12);
       border-radius: 22px;
       padding: 16px;
-      box-shadow: 0 18px 34px rgba(21,16,33,.12);
+      box-shadow: 0 18px 34px rgba(18,15,28,.12);
     }
 
     .image-proof-card strong {
@@ -820,8 +826,8 @@
     input::placeholder, textarea::placeholder { color: #8a93a5; }
 
     input:focus, textarea:focus, select:focus {
-      border-color: rgba(111,66,245,.70);
-      box-shadow: 0 0 0 4px rgba(111,66,245,.10);
+      border-color: rgba(110,69,255,.70);
+      box-shadow: 0 0 0 4px rgba(110,69,255,.10);
     }
 
     textarea {
@@ -841,7 +847,7 @@
       font-size: 19px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 18px 34px rgba(255,106,61,.18);
+      box-shadow: 0 18px 34px rgba(255,98,51,.18);
     }
 
     .submit-btn:disabled {
@@ -891,7 +897,7 @@
       font-size: 16px;
       font-weight: 900;
       padding: 12px 16px;
-      box-shadow: 0 22px 44px rgba(21,16,33,.20);
+      box-shadow: 0 22px 44px rgba(18,15,28,.20);
       border: 1px solid rgba(255,214,77,.20);
     }
 
@@ -938,14 +944,15 @@
       .benefits,
       .reviews,
       .faq-grid,
-      .objection-cards {
+      .objection-cards,
+      .value-stack {
         grid-template-columns: 1fr;
       }
 
       .proof-strip,
       .order-highlight,
       .micro-trust,
-      .bundle-grid {
+      .offer-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -971,11 +978,11 @@
       .proof-strip,
       .order-highlight,
       .micro-trust,
-      .bundle-grid {
+      .offer-grid {
         grid-template-columns: 1fr;
       }
       .section-title { font-size: 28px; }
-      h1 { font-size: 34px; line-height: 1.18; }
+      h1 { font-size: 34px; line-height: 1.16; }
       .hero-subheadline { font-size: 19px; }
       .hero-sub { font-size: 17px; }
       .sticky-cta a { min-height: 66px; font-size: 15px; }
@@ -984,21 +991,21 @@
   </style>
 </head>
 <body>
-  <div class="topbar">🎁 UAE Exclusive Offer — 1 Piece for 75 AED or 2 Pieces for 120 AED + Cash on Delivery</div>
+  <div class="topbar">🔥 LIMITED UAE OFFER — 1 Piece for 75 AED or 2 Pieces for 120 AED + Cash on Delivery</div>
 
   <div class="shipping-bar">
     <div>🚚 Fast UAE Shipping</div>
     <div>💵 Cash on Delivery</div>
     <div>🔁 30-Day Replacement</div>
     <div>👶 Suitable for Ages 3+</div>
-    <div>📞 Order Confirmation by Phone</div>
+    <div>📞 Order Confirmed by Phone</div>
   </div>
 
   <header class="header">
     <div class="header-inner container">
       <div>
         <div class="brand-name">Study Book</div>
-        <div class="brand-tag">Premium Interactive Educational Book for Kids</div>
+        <div class="brand-tag">Premium Interactive Learning Book for Kids</div>
       </div>
       <a href="#order" class="header-btn">Order Now</a>
     </div>
@@ -1009,107 +1016,109 @@
       <section class="card hero-card">
         <div class="hero-grid">
           <div>
-            <div class="hero-badge">🔥 Premium UAE Deal — 1 for 75 AED or 2 for only 120 AED with Cash on Delivery</div>
+            <div class="hero-badge">🔥 Best-selling UAE learning deal — 1 for 75 AED or 2 for 120 AED today</div>
 
             <div class="badge-row">
-              <div class="badge">Interactive Audio Learning</div>
-              <div class="badge">Suitable for Ages 3+</div>
-              <div class="badge">Fun + Educational</div>
+              <div class="badge">Interactive Sound Learning</div>
+              <div class="badge">More Engaging Than Regular Books</div>
               <div class="badge">Perfect for Home Learning</div>
+              <div class="badge">Great for Siblings or Gifting</div>
             </div>
 
             <div class="rating">
               <div class="stars">★★★★★</div>
-              <div class="rating-text">A smarter way to help your child learn letters, words, sounds, and listening skills</div>
+              <div class="rating-text">A stronger, smarter way to make your child enjoy learning at home</div>
             </div>
 
-            <h1>The Premium Interactive Learning Book That Makes Kids Want to Learn</h1>
-            <p class="hero-subheadline">Turn everyday learning into a fun, engaging experience with sound, touch, and early education your child will actually enjoy</p>
+            <h1>Stop Letting Learning Feel Boring for Your Child</h1>
+            <p class="hero-subheadline">Give them a premium interactive book that turns letters, sounds, and words into a fun experience they want to repeat</p>
 
             <div class="hero-inline-image">
               <img src="study-book-hero.jpg" alt="Study Book for children" />
             </div>
 
-            <div class="hero-lead-box">
-              <strong>Why parents love it:</strong>
-              It keeps children engaged, makes learning feel like play, and gives parents an easier way to introduce letters, sounds, words, and early skills at home.
+            <div class="hero-problem-box">
+              <strong>Here is the real problem most parents face:</strong>
+              Children lose focus fast, get bored with ordinary books, and resist learning when it feels dry. Study Book solves that by making learning feel active, exciting, and rewarding.
             </div>
 
             <p class="hero-sub">
-              <strong>Study Book</strong> is more than just a kids book. It is a premium interactive learning tool designed to support listening, pronunciation, word recognition, and early learning through sound buttons and hands-on interaction.
+              <strong>Study Book</strong> is a premium interactive early-learning book designed to help children improve listening, pronunciation, word recognition, and attention through touch-and-sound learning.
               <br><br>
-              Perfect for families in the UAE who want something more engaging than ordinary books — with a strong value offer of <strong>1 piece for 75 AED</strong> or <strong>2 pieces for only 120 AED</strong>.
+              Instead of sitting with another passive book that gets ignored, your child gets an experience that feels more like play while still supporting real early learning.
+              <br><br>
+              And today, you can get <strong>1 piece for 75 AED</strong> or unlock the stronger value offer of <strong>2 pieces for only 120 AED</strong>.
             </p>
 
-            <div class="alert-strip" id="dynamicAlertStrip">📚 Special UAE price today: 1 piece for 75 AED or 2 pieces for only 120 AED — cash on delivery + 30-day replacement guarantee</div>
+            <div class="alert-strip" id="dynamicAlertStrip">📚 Today’s direct-response offer: 1 piece for 75 AED or 2 pieces for only 120 AED — cash on delivery + 30-day replacement guarantee</div>
 
             <div class="quick-points">
-              <div class="point">✅ Premium interactive learning experience</div>
-              <div class="point">✅ Supports attention and pronunciation</div>
-              <div class="point">✅ Better than ordinary passive books</div>
-              <div class="point">✅ Great for siblings or gifting</div>
+              <div class="point">✅ Grabs attention faster than regular books</div>
+              <div class="point">✅ Helps children listen, repeat, and recognize</div>
+              <div class="point">✅ Makes home learning feel easier</div>
+              <div class="point">✅ 2-piece deal gives the best value</div>
             </div>
 
-            <div class="bundle-grid">
-              <div class="bundle-card">
-                <div class="bundle-title">1 Piece</div>
-                <div class="bundle-price">75 AED</div>
-                <div class="bundle-old">89 AED</div>
-                <div class="bundle-desc">Perfect if you want to try it for one child with a great entry offer.</div>
+            <div class="offer-grid">
+              <div class="offer-card">
+                <div class="offer-title">1 Piece</div>
+                <div class="offer-price">75 AED</div>
+                <div class="offer-old">89 AED</div>
+                <div class="offer-desc">A strong first offer if you want to start with one book for one child.</div>
               </div>
 
-              <div class="bundle-card featured">
-                <div class="bundle-tag">BEST VALUE</div>
-                <div class="bundle-title">2 Pieces</div>
-                <div class="bundle-price">120 AED</div>
-                <div class="bundle-old">150 AED</div>
-                <div class="bundle-desc">Best choice for siblings, twins, gifting, or keeping one at home and one for travel.</div>
+              <div class="offer-card best">
+                <div class="offer-pill">BEST VALUE</div>
+                <div class="offer-title">2 Pieces</div>
+                <div class="offer-price">120 AED</div>
+                <div class="offer-old">150 AED</div>
+                <div class="offer-desc">The smart choice for siblings, gifts, or keeping one in a second place while saving more overall.</div>
               </div>
             </div>
 
             <div class="price-box">
-              <div class="offer">🔥 Today’s Premium UAE Offer</div>
+              <div class="offer-headline">🔥 The Premium Offer Parents Are Taking Fast</div>
               <div class="price-row">
                 <div class="new-price" id="dynamicPrice">75 AED</div>
                 <div class="old-price" id="dynamicOldPrice">89 AED</div>
                 <div class="save" id="dynamicSave">Save 14 AED</div>
               </div>
-              <div class="delivery">Choose the best deal for your family: 1 piece for 75 AED or 2 pieces for only 120 AED with fast shipping across the UAE</div>
+              <div class="delivery">Choose your best value now: 1 piece for 75 AED or 2 pieces for only 120 AED with fast UAE-wide shipping</div>
               <div class="mini-note">🔁 30-day replacement guarantee on all products</div>
-              <div class="mini-note">📦 Our team will call you to confirm your order before shipping</div>
+              <div class="mini-note">📦 Your order is confirmed by phone before shipping</div>
 
               <div class="countdown-wrap">
                 <div>
-                  <div class="countdown-label">Today’s offer ends at midnight</div>
-                  <div class="micro-copy">Order before the current 1-piece and 2-piece deal expires</div>
+                  <div class="countdown-label">This offer ends at midnight</div>
+                  <div class="micro-copy">Order now before the 1-piece and 2-piece pricing changes</div>
                 </div>
                 <div class="countdown" id="countdown">00:00:00</div>
               </div>
             </div>
 
             <div class="cta-row">
-              <a href="#order" class="btn btn-primary" id="heroPrimaryBtn">Get Yours Now — 1 for 75 AED / 2 for 120 AED</a>
-              <a href="#details" class="btn btn-secondary">View Details</a>
+              <a href="#order" class="btn btn-primary" id="heroPrimaryBtn">Claim the Offer Now — 1 for 75 AED / 2 for 120 AED</a>
+              <a href="#details" class="btn btn-secondary">See Full Details</a>
             </div>
 
-            <div class="hero-cta-note">✅ Cash on delivery • ✅ Fast shipping • ✅ Strong value offer • ✅ Easy direct ordering</div>
+            <div class="hero-cta-note">✅ Cash on delivery • ✅ Fast shipping • ✅ Better value with 2 pieces • ✅ Easy direct ordering</div>
 
             <div class="micro-trust">
               <div class="micro-trust-item">✅ Cash on Delivery</div>
-              <div class="micro-trust-item">✅ UAE Shipping</div>
               <div class="micro-trust-item">✅ 30-Day Guarantee</div>
+              <div class="micro-trust-item">✅ UAE-Wide Shipping</div>
             </div>
           </div>
 
           <div class="media-stack">
             <div class="main-media">
               <img src="study-book-2.jpg" alt="Child using the Study Book" />
-              <div class="floating-badge">⚡ Best Seller</div>
-              <div class="floating-badge bottom">⭐ 30-Day Replacement</div>
+              <div class="floating-badge">⚡ Parent Favorite</div>
+              <div class="floating-badge bottom">⭐ Best Value: 2 for 120 AED</div>
 
               <div class="image-proof-card">
-                <strong>Premium feel. Better engagement. Better value.</strong>
-                <p>A more exciting choice than ordinary books — and even stronger value when you choose the 2-piece 120 AED deal.</p>
+                <strong>More exciting than ordinary books</strong>
+                <p>Children stay more engaged because they can press, hear, repeat, and interact — instead of just looking and losing interest.</p>
               </div>
             </div>
           </div>
@@ -1135,7 +1144,7 @@
             </div>
             <div class="proof-box">
               <div class="num">Audio</div>
-              <div class="txt">Interactive learning that supports attention, sound, and recognition</div>
+              <div class="txt">Interactive learning that supports sound, attention, and recognition</div>
             </div>
           </div>
         </div>
@@ -1145,27 +1154,23 @@
     <section class="section">
       <div class="container">
         <div class="card section-card">
-          <span class="section-kicker">Why this product?</span>
-          <h2 class="section-title">Why does this feel more premium than a regular kids learning book?</h2>
-          <p class="section-sub">Because it combines educational value, tactile interaction, sound, and stronger visual engagement in one product that feels more exciting to the child and more worthwhile to the parent.</p>
+          <span class="section-kicker">Why it converts</span>
+          <h2 class="section-title">Why do children respond to this faster than traditional learning tools?</h2>
+          <p class="section-sub">Because this does not ask the child to “sit and study.” It invites them to press, hear, repeat, and enjoy the process.</p>
 
           <div class="features">
             <div class="feature">
-              <h3>Sound-based learning</h3>
-              <p>Helps children recognize sounds, letters, and words in a fun and age-appropriate way that supports early learning.</p>
+              <h3>It feels active, not passive</h3>
+              <p>Children interact with the book instead of just staring at it, which makes learning more memorable and enjoyable.</p>
             </div>
             <div class="feature">
-              <h3>Interactive buttons kids actually enjoy</h3>
-              <p>Keeps children curious, engaged, and more willing to repeat the experience again and again.</p>
+              <h3>It keeps attention longer</h3>
+              <p>The sound buttons and interactive format help reduce boredom and encourage repetition.</p>
             </div>
             <div class="feature">
-              <h3>Better home learning time</h3>
-              <p>Creates a more meaningful and enjoyable learning experience between parents and children.</p>
+              <h3>It makes learning easier for parents</h3>
+              <p>You get a simpler way to introduce letters, sounds, and words without making learning feel heavy.</p>
             </div>
-          </div>
-
-          <div class="cta-row">
-            <a href="#order" class="btn btn-primary">I Want It for My Child</a>
           </div>
         </div>
       </div>
@@ -1174,17 +1179,46 @@
     <section class="section">
       <div class="container">
         <div class="card section-card">
-          <span class="section-kicker">Why buy now?</span>
-          <h2 class="section-title">Why is the 2-piece deal the smartest value?</h2>
-          <p class="section-sub">If you are already convinced your child will enjoy it, the 2-piece bundle gives you much better practical value.</p>
+          <span class="section-kicker">Value stack</span>
+          <h2 class="section-title">What your child gets in one product</h2>
+          <p class="section-sub">This is why the price feels small compared to the full value inside the offer.</p>
+
+          <div class="value-stack">
+            <div class="value-item">
+              <h3>Interactive sound learning</h3>
+              <p>Supports listening, repetition, and better early engagement with educational content.</p>
+            </div>
+            <div class="value-item">
+              <h3>Word and sound recognition</h3>
+              <p>Helps children become more familiar with letters, sounds, and simple words.</p>
+            </div>
+            <div class="value-item">
+              <h3>Better home-learning experience</h3>
+              <p>Gives parents a more enjoyable way to support learning inside the house.</p>
+            </div>
+            <div class="value-item">
+              <h3>Premium bundle value</h3>
+              <p>2 pieces for 120 AED is the stronger deal if you want better practical use and better savings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card section-card">
+          <span class="section-kicker">Why buy 2?</span>
+          <h2 class="section-title">Why the 2-piece deal is the smartest move</h2>
+          <p class="section-sub">If you already know your child will like it, the 2-piece option is the better decision.</p>
 
           <div class="benefits">
-            <div class="benefit">🎵 Audio-based learning helps improve listening and attention.</div>
-            <div class="benefit">🧠 Supports cognitive development and focus.</div>
-            <div class="benefit">🗣️ Helps children learn pronunciation and word recognition.</div>
-            <div class="benefit">🎁 Ideal for siblings, twins, or gifting.</div>
-            <div class="benefit">🏠 Keep one at home and one for travel or grandparents’ house.</div>
-            <div class="benefit">💰 2 pieces for 120 AED gives clearly stronger value than buying separately.</div>
+            <div class="benefit">🎁 Perfect for siblings, twins, or gifting.</div>
+            <div class="benefit">🏠 Keep one at home and one in a second location.</div>
+            <div class="benefit">💰 Better savings than buying separately.</div>
+            <div class="benefit">📦 More practical for larger families.</div>
+            <div class="benefit">🧠 Same learning benefit, stronger overall value.</div>
+            <div class="benefit">🔥 This is the deal many parents choose when they want the best offer.</div>
           </div>
         </div>
       </div>
@@ -1229,22 +1263,21 @@
     <section class="section">
       <div class="container">
         <div class="card section-card">
-          <span class="section-kicker">Safety & quality</span>
-          <h2 class="section-title">Designed for a more comfortable and trusted learning experience</h2>
-          <p class="section-sub">Built with care in both design and quality to support better home learning.</p>
+          <span class="section-kicker">Objection handling</span>
+          <h2 class="section-title">Still unsure? Here is what most parents want to know</h2>
 
           <div class="objection-cards">
             <div class="objection-card">
-              <h3>Child-friendly design</h3>
-              <p>Made with suitable materials to provide a better and more comfortable educational experience for children.</p>
+              <h3>“Will my child actually use it?”</h3>
+              <p>The interactive sound-and-touch format is exactly what makes it more engaging than ordinary books.</p>
             </div>
             <div class="objection-card">
-              <h3>Gulf conformity mark</h3>
-              <p>The product carries Gulf conformity certification.</p>
+              <h3>“Is it worth the price?”</h3>
+              <p>Yes — especially when you consider the learning value, interactivity, replacement guarantee, and the stronger 2-piece deal.</p>
             </div>
             <div class="objection-card">
-              <h3>Learning + Fun</h3>
-              <p>Combines educational value with enjoyable interaction to help children stay interested for longer.</p>
+              <h3>“Is ordering safe?”</h3>
+              <p>Yes. You get cash on delivery, phone confirmation before shipping, and a 30-day replacement guarantee.</p>
             </div>
           </div>
         </div>
@@ -1255,8 +1288,8 @@
       <div class="container">
         <div class="card section-card">
           <span class="section-kicker">Customer reviews</span>
-          <h2 class="section-title">Why are parents across the UAE choosing it?</h2>
-          <p class="section-sub">Real reasons many families love this interactive learning book.</p>
+          <h2 class="section-title">Why are parents in the UAE ordering it?</h2>
+          <p class="section-sub">Because they want something that feels more useful than a toy and more engaging than a regular book.</p>
 
           <div class="reviews">
             <div class="review">
@@ -1313,7 +1346,7 @@
             </div>
             <div class="faq-item">
               <strong>Why should I choose 2 pieces?</strong>
-              <p>It is the best-value option for siblings, gifting, or keeping one in a second location.</p>
+              <p>Because it is the stronger-value option for siblings, gifts, or keeping one in another location.</p>
             </div>
             <div class="faq-item">
               <strong>Is there a guarantee?</strong>
@@ -1327,17 +1360,17 @@
     <section class="section" id="order">
       <div class="container">
         <div class="card order-box">
-          <span class="section-kicker">Order now</span>
-          <h2 class="section-title">Lock in the current offer before it ends</h2>
+          <span class="section-kicker">Final step</span>
+          <h2 class="section-title">Claim today’s offer before the current price ends</h2>
           <p class="section-sub">Complete the form in less than 30 seconds and we will confirm your order by phone before shipping.</p>
 
-          <div class="order-priority">📦 Premium UAE offer: 1 piece for 75 AED or upgrade to 2 pieces for only 120 AED — cash on delivery available</div>
+          <div class="order-priority">📦 Order 1 piece for 75 AED or upgrade to 2 pieces for only 120 AED — cash on delivery available across the UAE</div>
 
           <div class="order-highlight">
             <div class="order-pill" id="orderHighlightPrice">💰 Price: 1 for 75 AED or 2 for 120 AED</div>
             <div class="order-pill">🚚 Fast UAE Shipping</div>
             <div class="order-pill">💵 Cash on Delivery</div>
-            <div class="order-pill">🎁 Best Value: 2 Pieces</div>
+            <div class="order-pill">🔥 Best Value: 2 Pieces</div>
           </div>
 
           <form id="orderForm">
@@ -1367,7 +1400,7 @@
             </div>
 
             <div class="small-note" style="margin-top:14px; color:#5e6677;">Suitable for families across the UAE.</div>
-            <button type="submit" class="submit-btn" id="submitBtn">Order Now — 1 for 75 AED / 2 for 120 AED 📚</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Claim the Offer — 1 for 75 AED / 2 for 120 AED 📚</button>
           </form>
 
           <div class="status-msg status-success" id="successMsg">Your order has been sent successfully.</div>
@@ -1384,7 +1417,7 @@
   <div class="sticky-cta">
     <a href="#order" id="stickyOrderBtn">
       <span class="sticky-main">
-        Order Now Before the Offer Ends
+        Claim Today’s Offer
         <small>1 for 75 AED • 2 for 120 AED</small>
       </span>
       <span class="sticky-price" id="stickyPrice">75 AED</span>
@@ -1409,8 +1442,8 @@
           proofNum: "120",
           proofText: "2 pieces for only 120 AED instead of 150 AED with cash on delivery",
           highlightText: "💰 Price: 2 Pieces for 120 AED instead of 150 AED",
-          alertText: "📚 Special UAE price today: 2 pieces for only 120 AED instead of 150 AED — cash on delivery + 30-day replacement guarantee",
-          heroBtnText: "Get 2 Pieces for 120 AED"
+          alertText: "📚 Today’s direct-response offer: 2 pieces for only 120 AED instead of 150 AED — cash on delivery + 30-day replacement guarantee",
+          heroBtnText: "Claim 2 Pieces for 120 AED"
         };
       }
 
@@ -1423,8 +1456,8 @@
         proofNum: "75",
         proofText: "1 piece for 75 AED instead of 89 AED with cash on delivery",
         highlightText: "💰 Price: 1 Piece for 75 AED instead of 89 AED",
-        alertText: "📚 Special UAE price today: 1 piece for 75 AED instead of 89 AED — cash on delivery + 30-day replacement guarantee",
-        heroBtnText: "Get 1 Piece for 75 AED"
+        alertText: "📚 Today’s direct-response offer: 1 piece for 75 AED instead of 89 AED — cash on delivery + 30-day replacement guarantee",
+        heroBtnText: "Claim 1 Piece for 75 AED"
       };
     }
 
@@ -1448,7 +1481,7 @@
       if (dynamicPrice) dynamicPrice.textContent = offer.priceText;
       if (dynamicOldPrice) dynamicOldPrice.textContent = offer.oldPriceText;
       if (dynamicSave) dynamicSave.textContent = offer.saveText;
-      if (submitBtn) submitBtn.textContent = `Order Now — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
+      if (submitBtn) submitBtn.textContent = `Claim the Offer — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
       if (stickyPrice) stickyPrice.textContent = offer.priceText;
       if (orderHighlightPrice) orderHighlightPrice.textContent = offer.highlightText;
       if (dynamicAlertStrip) dynamicAlertStrip.textContent = offer.alertText;
@@ -1611,14 +1644,14 @@
       if (!englishNameRegex.test(name)) {
         alert("Please enter your name in English only.");
         submitBtn.disabled = false;
-        submitBtn.textContent = `Order Now — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
+        submitBtn.textContent = `Claim the Offer — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
         return;
       }
 
       if (!phoneRegex.test(phone)) {
         alert("Please enter a valid UAE phone number starting with 05 and containing 10 digits.");
         submitBtn.disabled = false;
-        submitBtn.textContent = `Order Now — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
+        submitBtn.textContent = `Claim the Offer — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
         return;
       }
 
@@ -1681,7 +1714,7 @@
         console.error("Order submit error:", error);
         showError();
         submitBtn.disabled = false;
-        submitBtn.textContent = `Order Now — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
+        submitBtn.textContent = `Claim the Offer — ${offer.quantity === 2 ? "2 for 120 AED" : "1 for 75 AED"} 📚`;
       }
     });
   </script>
