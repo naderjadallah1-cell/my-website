@@ -1,44 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Your Order Has Been Received Successfully</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>شكراً لك | تم استلام طلبك بنجاح</title>  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">  <style>
     :root {
-      --bg: #fff7f2;
+      --bg: #fff8f7;
       --bg-soft: #fffdfa;
       --white: #ffffff;
-      --text: #160f22;
-      --muted: #6b6478;
-      --line: #efe4f3;
-
-      --primary: #7c3cff;
-      --primary-dark: #5420d6;
-      --primary-soft: #f3ebff;
-
-      --accent: #ff5a36;
-      --accent-dark: #e13d19;
-      --accent-soft: #fff0e9;
-
-      --gold: #ffbf1f;
-      --gold-dark: #e09a00;
-      --gold-soft: #fff4cf;
-
-      --green: #16b86c;
-      --green-soft: #e9fbf2;
-      --green-dark: #0f8a4f;
-
-      --dark: #120d1d;
-      --dark-2: #241437;
-
-      --shadow: 0 14px 36px rgba(18,13,29,.09);
-      --shadow-strong: 0 28px 64px rgba(18,13,29,.18);
+      --text: #22141a;
+      --muted: #75646b;
+      --line: #f0dde1;
+      --primary: #8e1538;
+      --primary-dark: #65102a;
+      --primary-soft: #fcecf1;
+      --accent: #d4a437;
+      --accent-dark: #a87c18;
+      --accent-soft: #fff7df;
+      --gold: #c79b2c;
+      --green: #1f9c5c;
+      --green-soft: #ebfbf2;
+      --dark: #1a1015;
+      --dark-2: #311721;
+      --shadow: 0 14px 36px rgba(34,20,26,.09);
+      --shadow-strong: 0 28px 64px rgba(34,20,26,.18);
       --container: 980px;
     }
 
@@ -49,9 +35,9 @@
       font-family: 'Cairo', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(124,60,255,.13), transparent 24%),
-        radial-gradient(circle at top left, rgba(255,90,54,.14), transparent 22%),
-        linear-gradient(180deg, #fff7f2 0%, #ffffff 48%, #fffdfa 100%);
+        radial-gradient(circle at top right, rgba(142,21,56,.10), transparent 24%),
+        radial-gradient(circle at top left, rgba(212,164,55,.14), transparent 22%),
+        linear-gradient(180deg, #fff8f7 0%, #ffffff 48%, #fffdfa 100%);
       min-height: 100vh;
     }
 
@@ -59,14 +45,13 @@
     a { text-decoration: none; color: inherit; }
 
     .topbar {
-      background: linear-gradient(90deg, #ff512f, #ff7a18, #ff512f);
+      background: linear-gradient(90deg, #7d0f31, #a71441, #7d0f31);
       color: #fff;
       text-align: center;
       padding: 11px 14px;
       font-size: 14px;
       font-weight: 900;
-      letter-spacing: .12px;
-      box-shadow: 0 10px 24px rgba(255,81,47,.18);
+      box-shadow: 0 10px 24px rgba(125,15,49,.18);
     }
 
     .wrap {
@@ -87,9 +72,9 @@
       position: relative;
       padding: 36px 24px 28px;
       background:
-        radial-gradient(circle at 8% 8%, rgba(255,191,31,.20), transparent 16%),
-        radial-gradient(circle at 95% 10%, rgba(124,60,255,.18), transparent 18%),
-        linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
+        radial-gradient(circle at 8% 8%, rgba(212,164,55,.20), transparent 16%),
+        radial-gradient(circle at 95% 10%, rgba(142,21,56,.16), transparent 18%),
+        linear-gradient(180deg, #fffaf8 0%, #ffffff 100%);
       text-align: center;
     }
 
@@ -103,7 +88,7 @@
       justify-content: center;
       background: linear-gradient(135deg, #eafaf2, #f6fffa);
       border: 2px solid #c8edd8;
-      box-shadow: 0 18px 34px rgba(22,184,108,.16);
+      box-shadow: 0 18px 34px rgba(31,156,92,.16);
       font-size: 42px;
       color: var(--green);
       font-weight: 900;
@@ -121,23 +106,23 @@
       font-size: 13px;
       font-weight: 900;
       margin-bottom: 16px;
-      box-shadow: 0 10px 24px rgba(255,191,31,.14);
+      box-shadow: 0 10px 24px rgba(212,164,55,.14);
     }
 
     .hero h1 {
       margin: 0 0 10px;
       font-size: 42px;
-      line-height: 1.25;
+      line-height: 1.35;
       color: var(--dark);
       font-weight: 900;
     }
 
     .lead {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 18px;
       font-size: 18px;
-      line-height: 1.9;
-      color: #3d3650;
+      line-height: 2;
+      color: #4a3a42;
       font-weight: 700;
     }
 
@@ -153,8 +138,8 @@
     .hero-image img {
       width: 100%;
       border-radius: 28px;
-      border: 1px solid #e9edf5;
-      box-shadow: 0 20px 46px rgba(18,13,29,.14);
+      border: 1px solid #ece2e6;
+      box-shadow: 0 20px 46px rgba(34,20,26,.14);
       object-fit: cover;
       background: #fff;
     }
@@ -162,12 +147,12 @@
     .hero-offer-box {
       max-width: 760px;
       margin: 20px auto 0;
-      background: linear-gradient(135deg, #140d22, #26123d 58%, #1a1030 100%);
+      background: linear-gradient(135deg, #1d1017, #3a1724 58%, #26121b 100%);
       border: 1px solid rgba(255,255,255,.06);
       border-radius: 24px;
       padding: 18px;
       color: #fff;
-      box-shadow: 0 22px 50px rgba(18,13,29,.18);
+      box-shadow: 0 22px 50px rgba(34,20,26,.18);
     }
 
     .hero-offer-title {
@@ -179,8 +164,8 @@
 
     .hero-offer-text {
       font-size: 15px;
-      line-height: 1.9;
-      color: #d5daea;
+      line-height: 1.95;
+      color: #e1d7dc;
       font-weight: 700;
     }
 
@@ -204,15 +189,15 @@
 
     .section {
       padding: 24px;
-      border-top: 1px solid #edf1f7;
+      border-top: 1px solid #f0e7ea;
     }
 
     .section-kicker {
       display: inline-block;
       margin: 0 auto 10px;
-      background: linear-gradient(135deg, #f4ebff, #ecddff);
+      background: linear-gradient(135deg, #fff1f4, #fbe5eb);
       color: var(--primary-dark);
-      border: 1px solid #d6bfff;
+      border: 1px solid #f2c6d3;
       border-radius: 999px;
       padding: 8px 14px;
       font-size: 12px;
@@ -236,7 +221,7 @@
       text-align: center;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.8;
+      line-height: 1.9;
       font-weight: 700;
     }
 
@@ -247,7 +232,7 @@
     }
 
     .step {
-      background: linear-gradient(135deg, #fffdf5, #f7fbff);
+      background: linear-gradient(135deg, #fffdf8, #fff9fb);
       border: 1px solid var(--line);
       border-radius: 22px;
       padding: 18px;
@@ -262,11 +247,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #ff5a36, #ff7a18);
+      background: linear-gradient(135deg, #8e1538, #c11f52);
       color: #fff;
       font-size: 18px;
       font-weight: 900;
-      box-shadow: 0 12px 24px rgba(255,90,54,.24);
+      box-shadow: 0 12px 24px rgba(142,21,56,.24);
     }
 
     .step h3 {
@@ -278,8 +263,8 @@
 
     .step p {
       margin: 0;
-      color: #586274;
-      line-height: 1.8;
+      color: #5f5259;
+      line-height: 1.9;
       font-size: 15px;
       font-weight: 700;
     }
@@ -300,7 +285,7 @@
       border-radius: 22px;
       padding: 18px 14px;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(18,13,29,.04);
+      box-shadow: 0 8px 20px rgba(34,20,26,.04);
     }
 
     .summary-icon {
@@ -318,7 +303,7 @@
     .summary-text {
       font-size: 14px;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.9;
       font-weight: 700;
       word-break: break-word;
     }
@@ -331,12 +316,12 @@
       padding: 18px;
       font-size: 15px;
       font-weight: 800;
-      line-height: 1.9;
+      line-height: 1.95;
       text-align: center;
     }
 
     .contact-box {
-      background: linear-gradient(135deg, #fdfdfd, #f6f9ff);
+      background: linear-gradient(135deg, #fdfdfd, #fff9fb);
       border: 1px solid var(--line);
       border-radius: 24px;
       padding: 20px;
@@ -347,13 +332,13 @@
       display: block;
       margin-bottom: 8px;
       font-size: 18px;
-      color: var(--accent-dark);
+      color: var(--primary-dark);
     }
 
     .contact-box p {
       margin: 0;
-      color: #586274;
-      line-height: 1.9;
+      color: #5f5259;
+      line-height: 1.95;
       font-size: 15px;
       font-weight: 700;
     }
@@ -381,20 +366,18 @@
       cursor: pointer;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
+    .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
-      background: linear-gradient(135deg, #ff5a36, #ff7a18);
+      background: linear-gradient(135deg, #8e1538, #c11f52);
       color: #fff;
-      box-shadow: 0 18px 34px rgba(255,90,54,.20);
+      box-shadow: 0 18px 34px rgba(142,21,56,.20);
     }
 
     .btn-secondary {
-      background: linear-gradient(135deg, #7c3cff, #5420d6);
-      color: #fff;
-      box-shadow: 0 16px 34px rgba(124,60,255,.18);
+      background: linear-gradient(135deg, #d4a437, #b98718);
+      color: #1a1015;
+      box-shadow: 0 16px 34px rgba(212,164,55,.18);
     }
 
     .footer-note {
@@ -402,7 +385,7 @@
       text-align: center;
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.9;
+      line-height: 1.95;
       font-weight: 700;
     }
 
@@ -441,166 +424,160 @@
         font-size: 36px;
       }
     }
-  </style>
-</head>
+  </style></head>
 <body>
-  <div class="topbar">✅ Your order has been received successfully — our team will contact you shortly for confirmation</div>
-
-  <div class="wrap">
+  <div class="topbar">✅ تم استلام طلبك بنجاح — سيتواصل معك فريقنا قريبًا لتأكيد الطلب</div>  <div class="wrap">
     <div class="card">
       <div class="hero">
-        <div class="thank-badge">🎉 Order Confirmed in System</div>
-        <div class="success-badge">✓</div>
+        <div class="thank-badge">🎉 تم تسجيل طلبك في النظام</div>
+        <div class="success-badge">✓</div><h1>شكراً لك<span id="customerNameInline"> 🌷</span><br>تم إرسال طلبك بنجاح</h1>
 
-        <h1>Thank You<span id="customerNameInline"> 🌷</span><br>Your Order Has Been Submitted Successfully</h1>
+    <p class="lead">
+      شكرًا لاختيارك <strong id="productNameLead">هدية حبيبتي الغالية - بوكس خشبي فاخر مع ساعة وإكسسوارات</strong>.
+      تم إرسال طلبك بنجاح إلى فريقنا، وسنتواصل معك قريبًا لتأكيد الطلب وتفاصيل التوصيل.
+    </p>
 
-        <p class="lead">
-          Thank you for choosing <strong id="productNameLead">Study Book - Intellectual Learning Book</strong>.
-          Your order has been sent successfully to our team, and we will contact you soon to confirm your order and delivery details within the UAE.
-        </p>
+    <div class="hero-image">
+      <img src="gift-main.jpg" alt="صورة المنتج" id="thankYouImage" />
+    </div>
 
-        <div class="hero-image">
-          <img src="study-book-thankyou.jpg" alt="Product Image" id="thankYouImage" />
-        </div>
+    <div class="hero-offer-box">
+      <div class="hero-offer-title">طلبك الآن في قائمة التأكيد</div>
+      <div class="hero-offer-text">
+        يرجى إبقاء هاتفك متاحًا، حيث سيتواصل معك فريقنا قريبًا لتأكيد الاسم والعنوان ورقم الهاتف وتفاصيل الشحن قبل إرسال الطلب.
+      </div>
+    </div>
 
-        <div class="hero-offer-box">
-          <div class="hero-offer-title">Your order is now in the confirmation queue</div>
-          <div class="hero-offer-text">
-            Please keep your phone available. Our team will call you shortly to confirm your name, address, quantity, and shipping details before dispatch.
-          </div>
-        </div>
+    <div class="micro-trust">
+      <div class="micro-trust-item">💵 الدفع عند الاستلام</div>
+      <div class="micro-trust-item">🚚 توصيل سريع</div>
+      <div class="micro-trust-item">🛡️ ضمان سنة على الساعة</div>
+    </div>
+  </div>
 
-        <div class="micro-trust">
-          <div class="micro-trust-item">💵 Cash on Delivery</div>
-          <div class="micro-trust-item">🚚 Fast UAE Shipping</div>
-          <div class="micro-trust-item">🔁 30-Day Replacement Guarantee</div>
-        </div>
+  <div class="section">
+    <div class="section-head">
+      <div class="section-kicker">الخطوات التالية</div>
+      <h2 class="section-title">ماذا سيحدث بعد ذلك؟</h2>
+      <p class="section-sub">هذه هي المراحل التالية بعد إرسال طلبك.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>مراجعة الطلب</h3>
+        <p>يقوم فريقنا بمراجعة تفاصيل الطلب والتأكد من جاهزيته للتأكيد والشحن.</p>
       </div>
 
-      <div class="section">
-        <div class="section-head">
-          <div class="section-kicker">Next steps</div>
-          <h2 class="section-title">What happens next?</h2>
-          <p class="section-sub">Here are the next steps after your order submission.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <h3>Order Review</h3>
-            <p>Our team will review your order details and make sure everything is ready for confirmation and shipping.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-num">2</div>
-            <h3>Confirmation Call</h3>
-            <p>We will contact you on the phone number you provided to confirm your name, address, and order details.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-num">3</div>
-            <h3>Preparation & Shipping</h3>
-            <p>After confirmation, your order will be prepared and shipped quickly within the UAE.</p>
-          </div>
-        </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>الاتصال للتأكيد</h3>
+        <p>سنتواصل معك على رقم الهاتف الذي أدخلته لتأكيد الاسم والعنوان وبيانات الطلب.</p>
       </div>
 
-      <div class="section">
-        <div class="section-head">
-          <div class="section-kicker">Order summary</div>
-          <h2 class="section-title">Your Order Summary</h2>
-          <p class="section-sub">Here are the main details we received.</p>
-        </div>
-
-        <div class="summary-grid">
-          <div class="summary-item">
-            <div class="summary-icon">📚</div>
-            <div class="summary-title">Product</div>
-            <div class="summary-text" id="productName">Study Book - Intellectual Learning Book</div>
-          </div>
-
-          <div class="summary-item">
-            <div class="summary-icon">💰</div>
-            <div class="summary-title">Price</div>
-            <div class="summary-text" id="productPrice">75 AED</div>
-          </div>
-
-          <div class="summary-item">
-            <div class="summary-icon">🔢</div>
-            <div class="summary-title">Quantity</div>
-            <div class="summary-text" id="productQuantity">1 Piece</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="summary-grid four">
-          <div class="summary-item">
-            <div class="summary-icon">📍</div>
-            <div class="summary-title">Emirate</div>
-            <div class="summary-text" id="customerCity">Not specified</div>
-          </div>
-
-          <div class="summary-item">
-            <div class="summary-icon">👤</div>
-            <div class="summary-title">Customer Name</div>
-            <div class="summary-text" id="customerName">Not specified</div>
-          </div>
-
-          <div class="summary-item">
-            <div class="summary-icon">📞</div>
-            <div class="summary-title">Phone Number</div>
-            <div class="summary-text" id="customerPhone">Not specified</div>
-          </div>
-
-          <div class="summary-item">
-            <div class="summary-icon">🔁</div>
-            <div class="summary-title">Guarantee</div>
-            <div class="summary-text" id="warrantyNote">30-day replacement guarantee</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="notice-box" id="orderNoticeBox">
-          Please keep your phone available, as our team will contact you to confirm your order before shipping.
-          If we are unable to reach you, your shipment may be delayed.
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="contact-box">
-          <strong>Important Note</strong>
-          <p id="contactNote">
-            If you entered any special note about your address or preferred contact time, our team will take it into consideration while reviewing your order.
-          </p>
-        </div>
-
-        <div class="cta-row">
-          <a href="index.html" class="btn btn-primary">Back to Home Page</a>
-          <a href="javascript:window.print()" class="btn btn-secondary">Print Confirmation Page</a>
-        </div>
-
-        <div class="footer-note">
-          Thank you for your trust ❤️<br>
-          We hope your child enjoys a fun and valuable learning experience.
-        </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>التجهيز والتوصيل</h3>
+        <p>بعد التأكيد يتم تجهيز الطلب وإرساله بسرعة إلى عنوانك.</p>
       </div>
     </div>
   </div>
 
-  <script>
+  <div class="section">
+    <div class="section-head">
+      <div class="section-kicker">ملخص الطلب</div>
+      <h2 class="section-title">تفاصيل طلبك</h2>
+      <p class="section-sub">هذه أهم البيانات التي استلمناها منك.</p>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="summary-icon">🎁</div>
+        <div class="summary-title">المنتج</div>
+        <div class="summary-text" id="productName">هدية حبيبتي الغالية - بوكس خشبي فاخر مع ساعة وإكسسوارات</div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-icon">💰</div>
+        <div class="summary-title">السعر</div>
+        <div class="summary-text" id="productPrice">185 AED</div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-icon">🔢</div>
+        <div class="summary-title">الكمية</div>
+        <div class="summary-text" id="productQuantity">1 قطعة</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="summary-grid four">
+      <div class="summary-item">
+        <div class="summary-icon">📍</div>
+        <div class="summary-title">الإمارة</div>
+        <div class="summary-text" id="customerCity">غير محدد</div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-icon">👤</div>
+        <div class="summary-title">الاسم</div>
+        <div class="summary-text" id="customerName">عميلنا العزيز</div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-icon">📞</div>
+        <div class="summary-title">رقم الهاتف</div>
+        <div class="summary-text" id="customerPhone">غير محدد</div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-icon">🛡️</div>
+        <div class="summary-title">الضمان</div>
+        <div class="summary-text" id="warrantyNote">ضمان سنة على الساعة</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="notice-box" id="orderNoticeBox">
+      يرجى إبقاء هاتفك متاحًا لأن فريقنا سيتواصل معك لتأكيد الطلب قبل الشحن.
+      وفي حال تعذر التواصل، قد يتأخر إرسال الطلب.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="contact-box">
+      <strong>ملاحظة مهمة</strong>
+      <p id="contactNote">
+        إذا أضفت أي ملاحظة خاصة بالعنوان أو وقت التواصل المناسب، سيأخذها فريقنا بعين الاعتبار أثناء مراجعة الطلب.
+      </p>
+    </div>
+
+    <div class="cta-row">
+      <a href="index.html" class="btn btn-primary">العودة إلى الصفحة الرئيسية</a>
+      <a href="javascript:window.print()" class="btn btn-secondary">طباعة صفحة التأكيد</a>
+    </div>
+
+    <div class="footer-note">
+      شكرًا لثقتك ❤️<br>
+      نتمنى أن تنال الهدية إعجاب الغالية وتترك أجمل أثر.
+    </div>
+  </div>
+</div>
+
+  </div>  <script>
     const defaults = {
-      product: "Study Book - Intellectual Learning Book",
-      price: "75 AED",
+      product: "هدية حبيبتي الغالية - بوكس خشبي فاخر مع ساعة وإكسسوارات",
+      price: "185 AED",
       quantity: 1,
-      sku: "SIEO-N-TY-ZAM",
-      city: "Not specified",
-      name: "Valued Customer",
-      phone: "Not specified",
-      warranty_note: "30-day replacement guarantee on all products",
+      sku: "HABIBATI-GIFT-BOX",
+      city: "غير محدد",
+      name: "عميلنا العزيز",
+      phone: "غير محدد",
+      warranty_note: "ضمان سنة على الساعة",
       notes: "",
-      image: "study-book-thankyou.jpg"
+      image: "gift-main.jpg"
     };
 
     function getQueryParams() {
@@ -652,7 +629,7 @@
     }
 
     function getQuantityLabel(quantity) {
-      return Number(quantity) === 2 ? "2 Pieces" : "1 Piece";
+      return Number(quantity) === 1 ? "1 قطعة" : `${quantity} قطع`;
     }
 
     const order = getOrderData();
@@ -668,14 +645,14 @@
 
     const customerNameInline = document.getElementById("customerNameInline");
     if (customerNameInline) {
-      customerNameInline.textContent = order.name && order.name !== "Valued Customer"
+      customerNameInline.textContent = order.name && order.name !== "عميلنا العزيز"
         ? ` ${order.name} 🌷`
         : " 🌷";
     }
 
     const noteEl = document.getElementById("contactNote");
-    if (noteEl && order.notes && order.notes.trim() !== "" && order.notes !== "No notes") {
-      noteEl.textContent = `Your note: ${order.notes}`;
+    if (noteEl && order.notes && order.notes.trim() !== "" && order.notes !== "لا توجد ملاحظات") {
+      noteEl.textContent = `ملاحظتك: ${order.notes}`;
     }
 
     const imageEl = document.getElementById("thankYouImage");
@@ -683,12 +660,6 @@
       imageEl.src = order.image;
     }
 
-    const orderNoticeBox = document.getElementById("orderNoticeBox");
-    if (orderNoticeBox && Number(order.quantity) === 2) {
-      orderNoticeBox.textContent = "Your order for 2 pieces has been received successfully. Please keep your phone available, as our team will contact you to confirm your order before shipping.";
-    }
-
-    document.title = `Thank You | ${order.product}`;
-  </script>
-</body>
+    document.title = `شكراً لك | ${order.product}`;
+  </script></body>
 </html>
