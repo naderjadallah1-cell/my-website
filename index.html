@@ -482,7 +482,6 @@
     }
 
     .micro-trust,
-    .trust-grid,
     .proof-strip,
     .features,
     .benefits,
@@ -981,7 +980,7 @@
   </style>
 </head>
 <body>
-  <div class="topbar">🎁 عرض فاخر اليوم — هدية حبيبتي الغالية الآن فقط 185 درهم بدل 370 درهم مع الدفع عند الاستلام</div>
+  <div class="topbar" id="topbarText">🎁 عرض فاخر اليوم — هدية حبيبتي الغالية الآن فقط 185 درهم بدل 370 درهم مع الدفع عند الاستلام</div>
 
   <div class="shipping-bar">
     <div>🚚 توصيل سريع لجميع أنحاء الدولة</div>
@@ -1017,7 +1016,7 @@
       <section class="card hero-card">
         <div class="hero-grid">
           <div>
-            <div class="hero-badge">🔥 عرض حصري لفترة محدودة — السعر الحالي 185 درهم فقط بدل 370 درهم</div>
+            <div class="hero-badge" id="heroBadgeText">🔥 عرض حصري لفترة محدودة — بوكس واحد 185 درهم أو 2 بوكس بـ 300 درهم فقط</div>
 
             <div class="badge-row">
               <div class="badge">بوكس خشبي فاخر</div>
@@ -1049,25 +1048,25 @@
               ومع جودة عالية في التصنيع، فالساعة <strong>ضد الماء</strong> ولا يتغير لونها بسهولة، بالإضافة إلى <strong>ضمان سنة كاملة</strong> على الساعة، وتوصيل سريع وآمن لجميع أنحاء الدولة.
             </p>
 
-            <div class="alert-strip" id="dynamicAlertStrip">💎 السعر الحصري اليوم: 185 درهم فقط بدل 370 درهم — والكمية محدودة</div>
+            <div class="alert-strip" id="dynamicAlertStrip">💎 العرض اليوم: بوكس واحد 185 درهم فقط بدل 370 درهم — أو 2 بوكس بـ 300 درهم — والكمية محدودة</div>
 
             <div class="quick-points">
               <div class="point">✅ ساعة أنيقة محفور عليها حبيبتي الغالية</div>
               <div class="point">✅ بوكس خشبي فاخر جاهز للإهداء</div>
-              <div class="point">✅ ضد الماء ولا يتغير اللون</div>
+              <div class="point">✅ 2 بوكس بسعر 300 درهم فقط</div>
               <div class="point">✅ توصيل سريع لجميع أنحاء الدولة</div>
             </div>
 
             <div class="price-box">
-              <div class="offer">🔥 السعر الحصري الآن</div>
+              <div class="offer" id="offerTitle">🔥 السعر الحصري الآن</div>
               <div class="price-row">
-                <div class="new-price">185 درهم</div>
-                <div class="old-price">370 درهم</div>
-                <div class="save">خصم 185 درهم</div>
+                <div class="new-price" id="dynamicPrice">185 درهم</div>
+                <div class="old-price" id="dynamicOldPrice">370 درهم</div>
+                <div class="save" id="dynamicSave">خصم 185 درهم</div>
               </div>
-              <div class="delivery">هدية فاخرة مثالية للزوجة، الخطيبة، الحبيبة أو أي شخص غالٍ على قلبك</div>
+              <div class="delivery" id="deliveryText">هدية فاخرة مثالية للزوجة، الخطيبة، الأم، الأخت أو أي شخص غالٍ على قلبك</div>
               <div class="mini-note">🛡️ ضمان سنة على الساعة</div>
-              <div class="mini-note">📦 التغليف أنيق جدًا ومناسب للتقديم مباشرة</div>
+              <div class="mini-note" id="miniOfferNote">📦 يمكنك طلب بوكس واحد أو 2 بوكس بسعر أوفر</div>
 
               <div class="countdown-wrap">
                 <div>
@@ -1112,12 +1111,12 @@
         <div class="card section-card">
           <div class="proof-strip">
             <div class="proof-box">
-              <div class="num">185</div>
-              <div class="txt">السعر الحالي بعد الخصم 185 درهم فقط</div>
+              <div class="num" id="proofPriceNum">185 / 300</div>
+              <div class="txt" id="proofPriceText">بوكس واحد 185 درهم أو 2 بوكس بـ 300 درهم</div>
             </div>
             <div class="proof-box">
               <div class="num">370</div>
-              <div class="txt">السعر قبل الخصم 370 درهم</div>
+              <div class="txt">سعر البوكس الواحد قبل الخصم 370 درهم</div>
             </div>
             <div class="proof-box">
               <div class="num">1 سنة</div>
@@ -1203,12 +1202,12 @@
           <span class="section-kicker">المزايا</span>
           <h2 class="section-title">لماذا تعتبر خيارًا ممتازًا الآن؟</h2>
           <div class="benefits">
-            <div class="benefit">💎 هدية راقية جدًا مناسبة للمناسبات الخاصة والمفاجآت الجميلة.</div>
+            <div class="benefit">💎 هدية راقية جدًا مناسبة للزوجة، الخطيبة، الأم، الأخت والمفاجآت الجميلة.</div>
             <div class="benefit">⌚ الساعة ضد الماء وتتحمل الاستخدام اليومي بشكل أفضل.</div>
             <div class="benefit">✨ لا يتغير لونها بسهولة وتحافظ على شكلها الأنيق.</div>
             <div class="benefit">🛡️ ضمان سنة على الساعة لراحة أكبر عند الشراء.</div>
             <div class="benefit">🚚 توصيل سريع وآمن لأي مكان بالدولة.</div>
-            <div class="benefit">🔥 خصم قوي يجعل السعر الحالي فرصة ممتازة قبل نفاد الكمية.</div>
+            <div class="benefit">🔥 عرض 2 بوكس بـ 300 درهم مناسب إذا كانت الهدية لشخصين أو لمناسبتين.</div>
           </div>
         </div>
       </div>
@@ -1257,28 +1256,28 @@
       <div class="container">
         <div class="card section-card">
           <span class="section-kicker">آراء العملاء</span>
-          <h2 class="section-title">ليش الكل يحب هذا النوع من الهدايا؟</h2>
-          <p class="section-sub">لأنه يجمع بين الإبهار والمعنى ويصل جاهزًا للتقديم بشكل أنيق جدًا.</p>
+          <h2 class="section-title">هدية مناسبة للنساء ويختارها الرجال والنساء معًا</h2>
+          <p class="section-sub">لأنها مناسبة كهدية للزوجة، الخطيبة، الأم، الأخت أو أي شخصية غالية، لذلك ستجد آراء من رجال ونساء.</p>
 
           <div class="reviews">
             <div class="review">
               <div class="stars">★★★★★</div>
-              <p>الهدية فعلاً فخمة جدًا، والبوكس نفسه يرفع القيمة بشكل واضح. كانت مفاجأة جميلة جدًا.</p>
-              <div class="review-name">سارة</div>
+              <p>طلبتها كهدية لزوجتي وكانت النتيجة أجمل من المتوقع. شكل البوكس فخم جدًا والهدية فعلاً تعطي قيمة ومعنى.</p>
+              <div class="review-name">أحمد</div>
               <div class="review-tag">دبي</div>
             </div>
 
             <div class="review">
               <div class="stars">★★★★★</div>
-              <p>شكل الساعة والإكسسوارات أرقى من المتوقع، والنقش أعطى الهدية معنى خاص جدًا.</p>
-              <div class="review-name">مها</div>
+              <p>أخذتها هدية لأمي، والتفاصيل كانت راقية جدًا. الساعة والإكسسوارات شكلهم أنيق والتقديم جاهز من غير أي تعب.</p>
+              <div class="review-name">نورة</div>
               <div class="review-tag">أبوظبي</div>
             </div>
 
             <div class="review">
               <div class="stars">★★★★★</div>
-              <p>وصلت بسرعة والتغليف جميل جدًا. مناسبة كهدية جاهزة من غير أي تعب إضافي.</p>
-              <div class="review-name">نورة</div>
+              <p>اخترتها لخطيبتي ووصلت بسرعة. أكثر شيء أعجبني هو فخامة البوكس نفسه وأن الهدية مناسبة فعلًا للمناسبات الخاصة.</p>
+              <div class="review-name">خالد</div>
               <div class="review-tag">الشارقة</div>
             </div>
           </div>
@@ -1309,16 +1308,16 @@
               <p>لا، الساعة مصممة بحيث لا يتغير لونها بسهولة مع الاستخدام المعتاد.</p>
             </div>
             <div class="faq-item">
+              <strong>هل يوجد عرض على 2 بوكس؟</strong>
+              <p>نعم، يمكنك طلب 2 بوكس بسعر 300 درهم فقط بدل شراء كل بوكس بشكل منفصل.</p>
+            </div>
+            <div class="faq-item">
               <strong>هل يوجد ضمان؟</strong>
               <p>نعم، يوجد ضمان سنة كاملة على الساعة.</p>
             </div>
             <div class="faq-item">
               <strong>هل التوصيل متاح في كل المناطق؟</strong>
               <p>نعم، يوجد توصيل سريع وآمن لجميع أنحاء الدولة.</p>
-            </div>
-            <div class="faq-item">
-              <strong>هل الكمية متوفرة دائمًا؟</strong>
-              <p>الكمية محدودة، لذلك يفضل الطلب الآن للاستفادة من السعر الحالي قبل النفاد.</p>
             </div>
           </div>
         </div>
@@ -1332,10 +1331,10 @@
           <h2 class="section-title">احجز السعر الحالي قبل انتهاء العرض</h2>
           <p class="section-sub">املأ النموذج خلال أقل من 30 ثانية وسنتواصل معك لتأكيد الطلب قبل الشحن.</p>
 
-          <div class="order-priority">📦 السعر الحصري الآن 185 درهم فقط بدل 370 درهم — مع توصيل سريع ودفع عند الاستلام</div>
+          <div class="order-priority" id="orderPriorityText">📦 العرض الحالي: بوكس واحد 185 درهم فقط أو 2 بوكس بـ 300 درهم — مع توصيل سريع ودفع عند الاستلام</div>
 
           <div class="order-highlight">
-            <div class="order-pill">💰 السعر: 185 درهم بدل 370</div>
+            <div class="order-pill" id="orderHighlightPrice">💰 السعر: بوكس واحد 185 درهم أو 2 بوكس بـ 300 درهم</div>
             <div class="order-pill">🚚 توصيل سريع</div>
             <div class="order-pill">💵 الدفع عند الاستلام</div>
             <div class="order-pill">🛡️ ضمان سنة</div>
@@ -1345,6 +1344,10 @@
             <div class="form-grid">
               <input id="name" type="text" placeholder="الاسم الكامل" required />
               <input id="phone" type="tel" placeholder="05XXXXXXXX" required inputmode="numeric" maxlength="10" pattern="^05\d{8}$" title="يجب أن يبدأ رقم الهاتف بـ 05 وأن يحتوي على 10 أرقام" />
+              <select id="quantity" required>
+                <option value="1">بوكس واحد — 185 درهم</option>
+                <option value="2">2 بوكس — 300 درهم</option>
+              </select>
               <select id="city" required>
                 <option value="">اختر الإمارة</option>
                 <option>دبي</option>
@@ -1381,7 +1384,7 @@
         اطلب الآن قبل انتهاء العرض
         <small>توصيل سريع + دفع عند الاستلام</small>
       </span>
-      <span class="sticky-price">185 درهم</span>
+      <span class="sticky-price" id="stickyPrice">185 درهم</span>
     </a>
   </div>
 
@@ -1391,6 +1394,89 @@
 
   <script>
     const scriptURL = "https://script.google.com/macros/s/AKfycby_dVGsD1tA6KBH7tem9B_1xXIdLZKAy2P75Ax0LuLTzQpFZGQk8lpFLjEr0le15zuQ/exec";
+
+    function getOfferByQuantity(qty) {
+      if (String(qty) === "2") {
+        return {
+          quantity: 2,
+          priceText: "300 درهم",
+          oldPriceText: "740 درهم",
+          saveText: "خصم 440 درهم",
+          priceValue: 300,
+          heroBtnText: "اطلب 2 بوكس بـ 300 درهم",
+          topbarText: "🎁 عرض فاخر اليوم — 2 بوكس من هدية حبيبتي الغالية الآن بـ 300 درهم فقط مع الدفع عند الاستلام",
+          heroBadgeText: "🔥 عرض حصري لفترة محدودة — 2 بوكس بـ 300 درهم فقط",
+          alertText: "💎 العرض اليوم: 2 بوكس بـ 300 درهم فقط — والكمية محدودة",
+          proofNum: "300",
+          proofText: "سعر 2 بوكس الآن 300 درهم فقط",
+          orderPriorityText: "📦 العرض الحالي: 2 بوكس بـ 300 درهم فقط — مع توصيل سريع ودفع عند الاستلام",
+          orderHighlightText: "💰 السعر: 2 بوكس بـ 300 درهم فقط",
+          submitBtnText: "اطلب الآن — 2 بوكس بـ 300 درهم 🎁",
+          stickyPriceText: "300 درهم",
+          deliveryText: "اختيار ممتاز إذا كنت تريد هديتين للزوجة والخطيبة أو للأم والأخت أو لمناسبتين مختلفتين",
+          miniOfferNote: "📦 عرض خاص: 2 بوكس بسعر 300 درهم فقط لفترة محدودة"
+        };
+      }
+
+      return {
+        quantity: 1,
+        priceText: "185 درهم",
+        oldPriceText: "370 درهم",
+        saveText: "خصم 185 درهم",
+        priceValue: 185,
+        heroBtnText: "اطلب الآن بسعر 185 درهم",
+        topbarText: "🎁 عرض فاخر اليوم — هدية حبيبتي الغالية الآن فقط 185 درهم بدل 370 درهم مع الدفع عند الاستلام",
+        heroBadgeText: "🔥 عرض حصري لفترة محدودة — بوكس واحد 185 درهم فقط بدل 370 درهم",
+        alertText: "💎 العرض اليوم: بوكس واحد 185 درهم فقط بدل 370 درهم — والكمية محدودة",
+        proofNum: "185",
+        proofText: "سعر البوكس الواحد الآن 185 درهم فقط بدل 370 درهم",
+        orderPriorityText: "📦 العرض الحالي: بوكس واحد 185 درهم فقط — مع توصيل سريع ودفع عند الاستلام",
+        orderHighlightText: "💰 السعر: بوكس واحد 185 درهم بدل 370 درهم",
+        submitBtnText: "اطلب الآن — 185 درهم 🎁",
+        stickyPriceText: "185 درهم",
+        deliveryText: "هدية فاخرة مثالية للزوجة، الخطيبة، الأم، الأخت أو أي شخص غالٍ على قلبك",
+        miniOfferNote: "📦 يمكنك طلب بوكس واحد أو 2 بوكس بسعر أوفر"
+      };
+    }
+
+    function updateOfferUI() {
+      const quantityEl = document.getElementById("quantity");
+      if (!quantityEl) return;
+
+      const offer = getOfferByQuantity(quantityEl.value);
+
+      const dynamicPrice = document.getElementById("dynamicPrice");
+      const dynamicOldPrice = document.getElementById("dynamicOldPrice");
+      const dynamicSave = document.getElementById("dynamicSave");
+      const submitBtn = document.getElementById("submitBtn");
+      const stickyPrice = document.getElementById("stickyPrice");
+      const orderHighlightPrice = document.getElementById("orderHighlightPrice");
+      const dynamicAlertStrip = document.getElementById("dynamicAlertStrip");
+      const proofPriceNum = document.getElementById("proofPriceNum");
+      const proofPriceText = document.getElementById("proofPriceText");
+      const heroPrimaryBtn = document.getElementById("heroPrimaryBtn");
+      const heroBadgeText = document.getElementById("heroBadgeText");
+      const topbarText = document.getElementById("topbarText");
+      const orderPriorityText = document.getElementById("orderPriorityText");
+      const deliveryText = document.getElementById("deliveryText");
+      const miniOfferNote = document.getElementById("miniOfferNote");
+
+      if (dynamicPrice) dynamicPrice.textContent = offer.priceText;
+      if (dynamicOldPrice) dynamicOldPrice.textContent = offer.oldPriceText;
+      if (dynamicSave) dynamicSave.textContent = offer.saveText;
+      if (submitBtn) submitBtn.textContent = offer.submitBtnText;
+      if (stickyPrice) stickyPrice.textContent = offer.stickyPriceText;
+      if (orderHighlightPrice) orderHighlightPrice.textContent = offer.orderHighlightText;
+      if (dynamicAlertStrip) dynamicAlertStrip.textContent = offer.alertText;
+      if (proofPriceNum) proofPriceNum.textContent = offer.proofNum;
+      if (proofPriceText) proofPriceText.textContent = offer.proofText;
+      if (heroPrimaryBtn) heroPrimaryBtn.textContent = offer.heroBtnText;
+      if (heroBadgeText) heroBadgeText.textContent = offer.heroBadgeText;
+      if (topbarText) topbarText.textContent = offer.topbarText;
+      if (orderPriorityText) orderPriorityText.textContent = offer.orderPriorityText;
+      if (deliveryText) deliveryText.textContent = offer.deliveryText;
+      if (miniOfferNote) miniOfferNote.textContent = offer.miniOfferNote;
+    }
 
     function formatCountdown(diff) {
       const hours = Math.floor(diff / (1000 * 60 * 60));
@@ -1432,18 +1518,27 @@
       this.value = this.value.replace(/\D/g, "").slice(0, 10);
     });
 
+    const quantityField = document.getElementById("quantity");
+    if (quantityField) {
+      quantityField.addEventListener("change", updateOfferUI);
+      updateOfferUI();
+    }
+
     let initiateCheckoutTracked = false;
 
     function trackInitiateCheckout() {
       if (initiateCheckoutTracked || typeof fbq === "undefined") return;
 
+      const qty = document.getElementById("quantity") ? document.getElementById("quantity").value : "1";
+      const offer = getOfferByQuantity(qty);
+
       fbq("track", "InitiateCheckout", {
         content_name: "هدية حبيبتي الغالية",
         content_ids: ["HABIBATI-GIFT-BOX"],
         content_type: "product",
-        value: 185,
+        value: offer.priceValue,
         currency: "AED",
-        num_items: 1
+        num_items: offer.quantity
       });
 
       initiateCheckoutTracked = true;
@@ -1537,6 +1632,8 @@
       trackInitiateCheckout();
 
       const submitBtn = document.getElementById("submitBtn");
+      const quantity = document.getElementById("quantity").value;
+      const offer = getOfferByQuantity(quantity);
       submitBtn.disabled = true;
       submitBtn.textContent = "جارٍ إرسال الطلب...";
 
@@ -1550,7 +1647,7 @@
       if (!phoneRegex.test(phone)) {
         alert("يرجى إدخال رقم هاتف إماراتي صحيح يبدأ بـ 05 ويتكون من 10 أرقام.");
         submitBtn.disabled = false;
-        submitBtn.textContent = "اطلب الآن — 185 درهم 🎁";
+        submitBtn.textContent = offer.submitBtnText;
         return;
       }
 
@@ -1562,10 +1659,10 @@
         notes: notes,
         product: "هدية حبيبتي الغالية - بوكس خشبي فاخر مع ساعة وإكسسوارات",
         product_sku: "HABIBATI-GIFT-BOX",
-        price: "185 AED",
-        quantity: 1,
+        price: offer.quantity === 2 ? "300 AED" : "185 AED",
+        quantity: offer.quantity,
         shipping_charges: 0,
-        discount: 185,
+        discount: offer.quantity === 2 ? 440 : 185,
         warranty_note: "ضمان سنة على الساعة",
         source: "Habibati Gift Landing Page",
         pageUrl: window.location.href
@@ -1579,8 +1676,8 @@
         notes: notes,
         product: "هدية حبيبتي الغالية - بوكس خشبي فاخر مع ساعة وإكسسوارات",
         product_sku: "HABIBATI-GIFT-BOX",
-        price: "185 AED",
-        quantity: 1,
+        price: offer.quantity === 2 ? "300 AED" : "185 AED",
+        quantity: offer.quantity,
         warranty_note: "ضمان سنة على الساعة",
         image: "gift-main.jpg"
       };
@@ -1591,17 +1688,18 @@
 
         if (typeof fbq !== "undefined") {
           fbq("track", "Purchase", {
-            value: 185,
+            value: offer.priceValue,
             currency: "AED",
             content_name: "هدية حبيبتي الغالية",
             content_ids: ["HABIBATI-GIFT-BOX"],
             content_type: "product",
-            num_items: 1
+            num_items: offer.quantity
           });
         }
 
         showSuccess();
         document.getElementById("orderForm").reset();
+        updateOfferUI();
         setTimeout(() => {
           window.location.href = buildThankYouUrl(thankYouData);
         }, 500);
@@ -1610,7 +1708,7 @@
         console.error("Order submit error:", error);
         showError();
         submitBtn.disabled = false;
-        submitBtn.textContent = "اطلب الآن — 185 درهم 🎁";
+        submitBtn.textContent = offer.submitBtnText;
       }
     });
   </script>
